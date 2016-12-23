@@ -7,24 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103618871E0CD87100348C8E /* TGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103618861E0CD87100348C8E /* TGTabBarController.m */; };
 		105EEE511E0BD4F4003A948D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 105EEE501E0BD4F4003A948D /* main.m */; };
 		105EEE541E0BD4F4003A948D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 105EEE531E0BD4F4003A948D /* AppDelegate.m */; };
-		105EEE571E0BD4F4003A948D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105EEE561E0BD4F4003A948D /* ViewController.m */; };
-		105EEE5A1E0BD4F4003A948D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE581E0BD4F4003A948D /* Main.storyboard */; };
 		105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE5B1E0BD4F4003A948D /* Assets.xcassets */; };
-		105EEE5F1E0BD4F4003A948D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE5D1E0BD4F4003A948D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103618851E0CD87100348C8E /* TGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTabBarController.h; sourceTree = "<group>"; };
+		103618861E0CD87100348C8E /* TGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTabBarController.m; sourceTree = "<group>"; };
 		105EEE4C1E0BD4F3003A948D /* MyWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105EEE501E0BD4F4003A948D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		105EEE521E0BD4F4003A948D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		105EEE531E0BD4F4003A948D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		105EEE551E0BD4F4003A948D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		105EEE561E0BD4F4003A948D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		105EEE591E0BD4F4003A948D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		105EEE5B1E0BD4F4003A948D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		105EEE5E1E0BD4F4003A948D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		105EEE601E0BD4F4003A948D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,12 +56,8 @@
 			children = (
 				105EEE521E0BD4F4003A948D /* AppDelegate.h */,
 				105EEE531E0BD4F4003A948D /* AppDelegate.m */,
-				105EEE551E0BD4F4003A948D /* ViewController.h */,
-				105EEE561E0BD4F4003A948D /* ViewController.m */,
-				105EEE581E0BD4F4003A948D /* Main.storyboard */,
-				105EEE5B1E0BD4F4003A948D /* Assets.xcassets */,
-				105EEE5D1E0BD4F4003A948D /* LaunchScreen.storyboard */,
-				105EEE601E0BD4F4003A948D /* Info.plist */,
+				103618851E0CD87100348C8E /* TGTabBarController.h */,
+				103618861E0CD87100348C8E /* TGTabBarController.m */,
 				105EEE4F1E0BD4F3003A948D /* Supporting Files */,
 			);
 			path = MyWeibo;
@@ -74,6 +66,8 @@
 		105EEE4F1E0BD4F3003A948D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				105EEE5B1E0BD4F4003A948D /* Assets.xcassets */,
+				105EEE601E0BD4F4003A948D /* Info.plist */,
 				105EEE501E0BD4F4003A948D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -105,6 +99,7 @@
 		105EEE441E0BD4F3003A948D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TG;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Theodore Guo";
 				TargetAttributes = {
@@ -136,9 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105EEE5F1E0BD4F4003A948D /* LaunchScreen.storyboard in Resources */,
 				105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */,
-				105EEE5A1E0BD4F4003A948D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,32 +142,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105EEE571E0BD4F4003A948D /* ViewController.m in Sources */,
 				105EEE541E0BD4F4003A948D /* AppDelegate.m in Sources */,
 				105EEE511E0BD4F4003A948D /* main.m in Sources */,
+				103618871E0CD87100348C8E /* TGTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		105EEE581E0BD4F4003A948D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				105EEE591E0BD4F4003A948D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		105EEE5D1E0BD4F4003A948D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				105EEE5E1E0BD4F4003A948D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		105EEE611E0BD4F4003A948D /* Debug */ = {
@@ -214,7 +188,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -253,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -265,9 +239,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = MyWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GZT.MyWeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = TG.MyWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,9 +252,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = MyWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GZT.MyWeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = TG.MyWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -302,6 +280,7 @@
 				105EEE651E0BD4F4003A948D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

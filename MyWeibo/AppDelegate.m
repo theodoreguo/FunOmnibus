@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TGTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Create window
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    // Set window's root controller
+    self.window.rootViewController = [[TGTabBarController alloc] init];
+    
+    // Show window
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
