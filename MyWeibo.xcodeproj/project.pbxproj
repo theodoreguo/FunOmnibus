@@ -7,21 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		103618871E0CD87100348C8E /* TGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103618861E0CD87100348C8E /* TGTabBarController.m */; };
-		105EEE511E0BD4F4003A948D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 105EEE501E0BD4F4003A948D /* main.m */; };
-		105EEE541E0BD4F4003A948D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 105EEE531E0BD4F4003A948D /* AppDelegate.m */; };
 		105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE5B1E0BD4F4003A948D /* Assets.xcassets */; };
+		10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC21E10171100130BFB /* TGEssenceViewController.m */; };
+		10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC81E10171100130BFB /* TGFollowViewController.m */; };
+		10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CCE1E10171100130BFB /* TGLatestViewController.m */; };
+		10F19CEC1E10171100130BFB /* TGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CD41E10171100130BFB /* TGMeViewController.m */; };
+		10F19CED1E10171100130BFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CD91E10171100130BFB /* AppDelegate.m */; };
+		10F19CEE1E10171100130BFB /* UIBarButtonItem+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CDC1E10171100130BFB /* UIBarButtonItem+TGExtension.m */; };
+		10F19CEF1E10171100130BFB /* UIView+FixViewDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CDE1E10171100130BFB /* UIView+FixViewDebugging.m */; };
+		10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE01E10171100130BFB /* UIView+TGExtension.m */; };
+		10F19CF11E10171100130BFB /* TGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE31E10171100130BFB /* TGTabBarController.m */; };
+		10F19CF21E10171100130BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE41E10171100130BFB /* main.m */; };
+		10F19CF31E10171100130BFB /* TGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE81E10171100130BFB /* TGTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		103618851E0CD87100348C8E /* TGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTabBarController.h; sourceTree = "<group>"; };
-		103618861E0CD87100348C8E /* TGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTabBarController.m; sourceTree = "<group>"; };
 		105EEE4C1E0BD4F3003A948D /* MyWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		105EEE501E0BD4F4003A948D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		105EEE521E0BD4F4003A948D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		105EEE531E0BD4F4003A948D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		105EEE5B1E0BD4F4003A948D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105EEE601E0BD4F4003A948D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F19CC11E10171100130BFB /* TGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGEssenceViewController.h; sourceTree = "<group>"; };
+		10F19CC21E10171100130BFB /* TGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGEssenceViewController.m; sourceTree = "<group>"; };
+		10F19CC71E10171100130BFB /* TGFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGFollowViewController.h; sourceTree = "<group>"; };
+		10F19CC81E10171100130BFB /* TGFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGFollowViewController.m; sourceTree = "<group>"; };
+		10F19CCD1E10171100130BFB /* TGLatestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLatestViewController.h; sourceTree = "<group>"; };
+		10F19CCE1E10171100130BFB /* TGLatestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLatestViewController.m; sourceTree = "<group>"; };
+		10F19CD31E10171100130BFB /* TGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMeViewController.h; sourceTree = "<group>"; };
+		10F19CD41E10171100130BFB /* TGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMeViewController.m; sourceTree = "<group>"; };
+		10F19CD81E10171100130BFB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		10F19CD91E10171100130BFB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		10F19CDB1E10171100130BFB /* UIBarButtonItem+TGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TGExtension.h"; sourceTree = "<group>"; };
+		10F19CDC1E10171100130BFB /* UIBarButtonItem+TGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TGExtension.m"; sourceTree = "<group>"; };
+		10F19CDD1E10171100130BFB /* UIView+FixViewDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FixViewDebugging.h"; sourceTree = "<group>"; };
+		10F19CDE1E10171100130BFB /* UIView+FixViewDebugging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FixViewDebugging.m"; sourceTree = "<group>"; };
+		10F19CDF1E10171100130BFB /* UIView+TGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TGExtension.h"; sourceTree = "<group>"; };
+		10F19CE01E10171100130BFB /* UIView+TGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TGExtension.m"; sourceTree = "<group>"; };
+		10F19CE21E10171100130BFB /* TGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTabBarController.h; sourceTree = "<group>"; };
+		10F19CE31E10171100130BFB /* TGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTabBarController.m; sourceTree = "<group>"; };
+		10F19CE41E10171100130BFB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10F19CE51E10171100130BFB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		10F19CE71E10171100130BFB /* TGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTabBar.h; sourceTree = "<group>"; };
+		10F19CE81E10171100130BFB /* TGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +79,7 @@
 		105EEE4E1E0BD4F3003A948D /* MyWeibo */ = {
 			isa = PBXGroup;
 			children = (
-				105EEE521E0BD4F4003A948D /* AppDelegate.h */,
-				105EEE531E0BD4F4003A948D /* AppDelegate.m */,
-				103618851E0CD87100348C8E /* TGTabBarController.h */,
-				103618861E0CD87100348C8E /* TGTabBarController.m */,
+				10F19CBE1E10171100130BFB /* Classes */,
 				105EEE4F1E0BD4F3003A948D /* Supporting Files */,
 			);
 			path = MyWeibo;
@@ -68,9 +90,197 @@
 			children = (
 				105EEE5B1E0BD4F4003A948D /* Assets.xcassets */,
 				105EEE601E0BD4F4003A948D /* Info.plist */,
-				105EEE501E0BD4F4003A948D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10F19CBE1E10171100130BFB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CBF1E10171100130BFB /* Essence */,
+				10F19CC51E10171100130BFB /* Follow */,
+				10F19CCB1E10171100130BFB /* Latest */,
+				10F19CD11E10171100130BFB /* Me */,
+				10F19CD71E10171100130BFB /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		10F19CBF1E10171100130BFB /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CC01E10171100130BFB /* Controller */,
+				10F19CC31E10171100130BFB /* Model */,
+				10F19CC41E10171100130BFB /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		10F19CC01E10171100130BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CC11E10171100130BFB /* TGEssenceViewController.h */,
+				10F19CC21E10171100130BFB /* TGEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10F19CC31E10171100130BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10F19CC41E10171100130BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10F19CC51E10171100130BFB /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CC61E10171100130BFB /* Controller */,
+				10F19CC91E10171100130BFB /* Model */,
+				10F19CCA1E10171100130BFB /* View */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		10F19CC61E10171100130BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CC71E10171100130BFB /* TGFollowViewController.h */,
+				10F19CC81E10171100130BFB /* TGFollowViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10F19CC91E10171100130BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10F19CCA1E10171100130BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10F19CCB1E10171100130BFB /* Latest */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CCC1E10171100130BFB /* Controller */,
+				10F19CCF1E10171100130BFB /* Model */,
+				10F19CD01E10171100130BFB /* View */,
+			);
+			path = Latest;
+			sourceTree = "<group>";
+		};
+		10F19CCC1E10171100130BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CCD1E10171100130BFB /* TGLatestViewController.h */,
+				10F19CCE1E10171100130BFB /* TGLatestViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10F19CCF1E10171100130BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10F19CD01E10171100130BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10F19CD11E10171100130BFB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CD21E10171100130BFB /* Controller */,
+				10F19CD51E10171100130BFB /* Model */,
+				10F19CD61E10171100130BFB /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		10F19CD21E10171100130BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CD31E10171100130BFB /* TGMeViewController.h */,
+				10F19CD41E10171100130BFB /* TGMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10F19CD51E10171100130BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10F19CD61E10171100130BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10F19CD71E10171100130BFB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CE61E10171100130BFB /* View */,
+				10F19CE11E10171100130BFB /* Controller */,
+				10F19CDA1E10171100130BFB /* Category */,
+				10F19CD81E10171100130BFB /* AppDelegate.h */,
+				10F19CD91E10171100130BFB /* AppDelegate.m */,
+				10F19CE41E10171100130BFB /* main.m */,
+				10F19CE51E10171100130BFB /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		10F19CDA1E10171100130BFB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CDB1E10171100130BFB /* UIBarButtonItem+TGExtension.h */,
+				10F19CDC1E10171100130BFB /* UIBarButtonItem+TGExtension.m */,
+				10F19CDD1E10171100130BFB /* UIView+FixViewDebugging.h */,
+				10F19CDE1E10171100130BFB /* UIView+FixViewDebugging.m */,
+				10F19CDF1E10171100130BFB /* UIView+TGExtension.h */,
+				10F19CE01E10171100130BFB /* UIView+TGExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		10F19CE11E10171100130BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CE21E10171100130BFB /* TGTabBarController.h */,
+				10F19CE31E10171100130BFB /* TGTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10F19CE61E10171100130BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10F19CE71E10171100130BFB /* TGTabBar.h */,
+				10F19CE81E10171100130BFB /* TGTabBar.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +352,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105EEE541E0BD4F4003A948D /* AppDelegate.m in Sources */,
-				105EEE511E0BD4F4003A948D /* main.m in Sources */,
-				103618871E0CD87100348C8E /* TGTabBarController.m in Sources */,
+				10F19CF21E10171100130BFB /* main.m in Sources */,
+				10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */,
+				10F19CEE1E10171100130BFB /* UIBarButtonItem+TGExtension.m in Sources */,
+				10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */,
+				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
+				10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */,
+				10F19CEC1E10171100130BFB /* TGMeViewController.m in Sources */,
+				10F19CEF1E10171100130BFB /* UIView+FixViewDebugging.m in Sources */,
+				10F19CED1E10171100130BFB /* AppDelegate.m in Sources */,
+				10F19CF31E10171100130BFB /* TGTabBar.m in Sources */,
+				10F19CF11E10171100130BFB /* TGTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = MyWeibo/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = MyWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -253,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = MyWeibo/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = MyWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

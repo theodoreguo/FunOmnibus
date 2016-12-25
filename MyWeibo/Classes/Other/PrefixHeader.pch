@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  MyWeibo
+//
+//  Created by Theodore Guo on 25/12/16.
+//  Copyright © 2016 Theodore Guo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+TGExtension.h"
+#import "UIBarButtonItem+TGExtension.h"
+
+#ifdef DEBUG
+#define TGLog(...) NSLog(__VA_ARGS__)
+#else
+#define TGLog(...)
+#endif
+
+#define TGLogFunc TGLog(@"%s", __func__);
+
+#define TGRGBColor(r, g, b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1.0]
+
+#define TGGlobalBackgroundColor TGRGBColor(223, 223, 223)
+
+#endif /* PrefixHeader_pch */
