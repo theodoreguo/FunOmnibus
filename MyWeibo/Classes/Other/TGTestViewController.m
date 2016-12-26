@@ -13,7 +13,7 @@
 @end
 
 @implementation TGTestViewController
-
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -29,5 +29,6 @@
     vc.view.backgroundColor = TGRGBColor(200, 100, 50);
     [self.navigationController pushViewController:vc animated:YES];
 }
+*/
 
 @end

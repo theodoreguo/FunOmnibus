@@ -41,9 +41,11 @@
     TGLogFunc;
 }
 
+/*
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     TGTestViewController *vc = [[TGTestViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+*/
 
 @end

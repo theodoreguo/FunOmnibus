@@ -20,9 +20,10 @@
 
 @implementation TGTabBarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+/**
+ *  Called when the class is used the first time
+ */
++ (void)initialize {    
     // Set UITabBarItem text attributes via "appearance" concurrently (Only those including UI_APPEARANCE_SELECTOR can be set by UITabBarItem)
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
@@ -36,6 +37,10 @@
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     // Add child view controller
     // Essence
@@ -123,7 +128,7 @@
     // Pack an navigation controller, and add it as TabBarController's child view controller
     TGNavigationController *nav = [[TGNavigationController alloc] initWithRootViewController:vc];
 //    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:nav];
 }
 

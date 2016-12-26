@@ -14,10 +14,22 @@
 
 @implementation TGNavigationController
 
+/**
+ *  Called when the class is used the first time
+ */
++ (void)initialize {
+    // Appearance will take effect only when navigation bar controller is used in TGNavigationController
+    //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
+
 
 /**
  *  Intercept all pushed controllers using this method
