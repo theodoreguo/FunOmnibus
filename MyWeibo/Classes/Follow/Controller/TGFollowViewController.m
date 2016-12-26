@@ -7,6 +7,7 @@
 //
 
 #import "TGFollowViewController.h"
+#import "TGRecommendViewController.h"
 
 @interface TGFollowViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /// Set navigation bar content
+    // Set navigation bar content
     // Set navigation bar title
     self.navigationItem.title = @"My Following";
     
@@ -36,7 +37,8 @@
 }
 
 - (void)followClick {
-    TGLogFunc;
+    TGRecommendViewController *vc = [[TGRecommendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

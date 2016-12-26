@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10073BCD1E114ADB00CA0379 /* TGFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10073BCC1E114ADB00CA0379 /* TGFollowViewController.xib */; };
+		100A7F2C1E116EC500394669 /* TGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100A7F2A1E116EC500394669 /* TGRecommendViewController.m */; };
+		100A7F2D1E116EC500394669 /* TGRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 100A7F2B1E116EC500394669 /* TGRecommendViewController.xib */; };
 		105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE5B1E0BD4F4003A948D /* Assets.xcassets */; };
 		10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC21E10171100130BFB /* TGEssenceViewController.m */; };
 		10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC81E10171100130BFB /* TGFollowViewController.m */; };
@@ -22,10 +24,14 @@
 		10F19CF31E10171100130BFB /* TGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE81E10171100130BFB /* TGTabBar.m */; };
 		10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */; };
 		10F3B2871E10C99800BFB8D8 /* TGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B2861E10C99800BFB8D8 /* TGTestViewController.m */; };
+		AEAFD4C45445A6DF97B20171 /* libPods-MyWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AC53B2D592F5815180798D /* libPods-MyWeibo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10073BCC1E114ADB00CA0379 /* TGFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGFollowViewController.xib; sourceTree = "<group>"; };
+		100A7F291E116EC500394669 /* TGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendViewController.h; sourceTree = "<group>"; };
+		100A7F2A1E116EC500394669 /* TGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendViewController.m; sourceTree = "<group>"; };
+		100A7F2B1E116EC500394669 /* TGRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRecommendViewController.xib; sourceTree = "<group>"; };
 		105EEE4C1E0BD4F3003A948D /* MyWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105EEE5B1E0BD4F4003A948D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105EEE601E0BD4F4003A948D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +61,9 @@
 		10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGNavigationController.m; sourceTree = "<group>"; };
 		10F3B2851E10C99800BFB8D8 /* TGTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTestViewController.h; sourceTree = "<group>"; };
 		10F3B2861E10C99800BFB8D8 /* TGTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTestViewController.m; sourceTree = "<group>"; };
+		2E06AD2C134C966DFF961837 /* Pods-MyWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		EB89A4B1E960A19844976C50 /* Pods-MyWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		F6AC53B2D592F5815180798D /* libPods-MyWeibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAFD4C45445A6DF97B20171 /* libPods-MyWeibo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +83,8 @@
 			children = (
 				105EEE4E1E0BD4F3003A948D /* MyWeibo */,
 				105EEE4D1E0BD4F3003A948D /* Products */,
+				61258EBD0B5122EA663062B8 /* Pods */,
+				9063B2903372089EA2A38DCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				10F19CBF1E10171100130BFB /* Essence */,
-				10F19CC51E10171100130BFB /* Follow */,
 				10F19CCB1E10171100130BFB /* Latest */,
+				10F19CC51E10171100130BFB /* Follow */,
 				10F19CD11E10171100130BFB /* Me */,
 				10F19CD71E10171100130BFB /* Other */,
 			);
@@ -163,6 +175,9 @@
 				10F19CC71E10171100130BFB /* TGFollowViewController.h */,
 				10F19CC81E10171100130BFB /* TGFollowViewController.m */,
 				10073BCC1E114ADB00CA0379 /* TGFollowViewController.xib */,
+				100A7F291E116EC500394669 /* TGRecommendViewController.h */,
+				100A7F2A1E116EC500394669 /* TGRecommendViewController.m */,
+				100A7F2B1E116EC500394669 /* TGRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,6 +311,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		61258EBD0B5122EA663062B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB89A4B1E960A19844976C50 /* Pods-MyWeibo.debug.xcconfig */,
+				2E06AD2C134C966DFF961837 /* Pods-MyWeibo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9063B2903372089EA2A38DCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6AC53B2D592F5815180798D /* libPods-MyWeibo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,9 +335,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105EEE631E0BD4F4003A948D /* Build configuration list for PBXNativeTarget "MyWeibo" */;
 			buildPhases = (
+				D280F070227534C9DDBFCB24 /* [CP] Check Pods Manifest.lock */,
 				105EEE481E0BD4F3003A948D /* Sources */,
 				105EEE491E0BD4F3003A948D /* Frameworks */,
 				105EEE4A1E0BD4F3003A948D /* Resources */,
+				76A783AC3FCC3E222C96218D /* [CP] Embed Pods Frameworks */,
+				E2722594972D5E6E45C53F5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,11 +390,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				10073BCD1E114ADB00CA0379 /* TGFollowViewController.xib in Resources */,
+				100A7F2D1E116EC500394669 /* TGRecommendViewController.xib in Resources */,
 				105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76A783AC3FCC3E222C96218D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D280F070227534C9DDBFCB24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2722594972D5E6E45C53F5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		105EEE481E0BD4F3003A948D /* Sources */ = {
@@ -368,6 +452,7 @@
 			files = (
 				10F19CF21E10171100130BFB /* main.m in Sources */,
 				10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */,
+				100A7F2C1E116EC500394669 /* TGRecommendViewController.m in Sources */,
 				10F19CEE1E10171100130BFB /* UIBarButtonItem+TGExtension.m in Sources */,
 				10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */,
 				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
@@ -471,6 +556,7 @@
 		};
 		105EEE641E0BD4F4003A948D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB89A4B1E960A19844976C50 /* Pods-MyWeibo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -485,6 +571,7 @@
 		};
 		105EEE651E0BD4F4003A948D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E06AD2C134C966DFF961837 /* Pods-MyWeibo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
