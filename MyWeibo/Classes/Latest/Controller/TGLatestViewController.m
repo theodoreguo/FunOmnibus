@@ -36,8 +36,7 @@
     self.view.backgroundColor = TGGlobalBackgroundColor;
 }
 
-- (void)tagClick
-{
+- (void)tagClick {
     TGLogFunc;
 }
 

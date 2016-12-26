@@ -43,13 +43,11 @@
     self.view.backgroundColor = TGGlobalBackgroundColor;
 }
 
-- (void)settingClick
-{
+- (void)settingClick {
     TGLogFunc;
 }
 
-- (void)nightModeClick
-{
+- (void)nightModeClick {
     TGLogFunc;
 }
 

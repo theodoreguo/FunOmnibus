@@ -12,6 +12,7 @@
 #import "TGFollowViewController.h"
 #import "TGMeViewController.h"
 #import "TGTabBar.h"
+#import "TGNavigationController.h"
 
 @interface TGTabBarController ()
 
@@ -111,8 +112,7 @@
  *  @param image        original image
  *  @param seletedImage seleted image
  */
-- (void) setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image seletedImage:(NSString *)seletedImage
-{
+- (void) setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image seletedImage:(NSString *)seletedImage {
     // Set text and images
     vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
@@ -121,7 +121,7 @@
 //    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100) / 100.0 green:arc4random_uniform(100) / 100.0 blue:arc4random_uniform(100) / 100.0 alpha:1.0];
     
     // Pack an navigation controller, and add it as TabBarController's child view controller
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    TGNavigationController *nav = [[TGNavigationController alloc] initWithRootViewController:vc];
 //    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:nav];

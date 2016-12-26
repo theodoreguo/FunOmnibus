@@ -19,6 +19,8 @@
 		10F19CF11E10171100130BFB /* TGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE31E10171100130BFB /* TGTabBarController.m */; };
 		10F19CF21E10171100130BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE41E10171100130BFB /* main.m */; };
 		10F19CF31E10171100130BFB /* TGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE81E10171100130BFB /* TGTabBar.m */; };
+		10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */; };
+		10F3B2871E10C99800BFB8D8 /* TGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B2861E10C99800BFB8D8 /* TGTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,10 @@
 		10F19CE51E10171100130BFB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		10F19CE71E10171100130BFB /* TGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTabBar.h; sourceTree = "<group>"; };
 		10F19CE81E10171100130BFB /* TGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTabBar.m; sourceTree = "<group>"; };
+		10F3B2821E10C4FC00BFB8D8 /* TGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGNavigationController.h; sourceTree = "<group>"; };
+		10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGNavigationController.m; sourceTree = "<group>"; };
+		10F3B2851E10C99800BFB8D8 /* TGTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTestViewController.h; sourceTree = "<group>"; };
+		10F3B2861E10C99800BFB8D8 /* TGTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +254,8 @@
 				10F19CD91E10171100130BFB /* AppDelegate.m */,
 				10F19CE41E10171100130BFB /* main.m */,
 				10F19CE51E10171100130BFB /* PrefixHeader.pch */,
+				10F3B2851E10C99800BFB8D8 /* TGTestViewController.h */,
+				10F3B2861E10C99800BFB8D8 /* TGTestViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -270,6 +278,8 @@
 			children = (
 				10F19CE21E10171100130BFB /* TGTabBarController.h */,
 				10F19CE31E10171100130BFB /* TGTabBarController.m */,
+				10F3B2821E10C4FC00BFB8D8 /* TGNavigationController.h */,
+				10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,7 +367,9 @@
 				10F19CEE1E10171100130BFB /* UIBarButtonItem+TGExtension.m in Sources */,
 				10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */,
 				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
+				10F3B2871E10C99800BFB8D8 /* TGTestViewController.m in Sources */,
 				10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */,
+				10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */,
 				10F19CEC1E10171100130BFB /* TGMeViewController.m in Sources */,
 				10F19CEF1E10171100130BFB /* UIView+FixViewDebugging.m in Sources */,
 				10F19CED1E10171100130BFB /* AppDelegate.m in Sources */,

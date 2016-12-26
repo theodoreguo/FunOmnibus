@@ -16,8 +16,7 @@
 
 @implementation TGTabBar
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // Set tabBar background image
         [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
@@ -34,8 +33,7 @@
     return self;
 }
          
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     CGFloat width = self.width;
