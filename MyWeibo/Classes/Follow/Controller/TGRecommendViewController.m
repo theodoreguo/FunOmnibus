@@ -9,15 +9,28 @@
 #import "TGRecommendViewController.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
+#import "TGRecommendCategoryCell.h"
+#import <MJExtension.h>
+#import "TGRecommendCategory.h"
 
-@interface TGRecommendViewController ()
+@interface TGRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
+
+// Data of left recommendation category part
+@property (nonatomic, strong) NSArray *categories;
+// Table of left recommendation category part
+@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 
 @end
 
 @implementation TGRecommendViewController
 
+static NSString *const TGCategoryId = @"category";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Register
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TGRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:TGCategoryId];
     
     // Set title
     self.title = @"Recommendations";
@@ -37,7 +50,12 @@
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionTask *task, id responseObject) {
         // Hide HUD
         [SVProgressHUD dismiss];
-        TGLog(@"%@", responseObject);
+        
+        // JSON data returned by server
+        self.categories = [TGRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        // Reload table
+        [self.categoryTableView reloadData];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         // Show failure reminder
         [SVProgressHUD showErrorWithStatus:@"Loading recommendation info failed"];
@@ -50,14 +68,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.categories.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TGRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:TGCategoryId];
+    
+    cell.category = self.categories[indexPath.row];
+    
+    return cell;
+}
 
 @end
