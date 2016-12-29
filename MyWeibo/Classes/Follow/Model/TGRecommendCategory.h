@@ -18,4 +18,7 @@
 // name
 @property (nonatomic, copy) NSString *name;
 
+// User data corresponding to this category
+@property (nonatomic, strong) NSMutableArray *users;
+
 @end

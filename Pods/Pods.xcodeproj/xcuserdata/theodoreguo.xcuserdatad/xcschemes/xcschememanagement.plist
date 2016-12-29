@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyWeibo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1225F749C4748555F7CDB1E5D4CA497E</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CF513D60C2DE1FA6C718C101DF0E830</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>533D0F79084B1FC3B3193A522E098E17</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0843D85803F5689F872DE532A14EE02</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF0AE343774BFE94C888C6E5B202F00A</key>
+		<key>B01BE827CF1C14BAF8ABC7F47E520F8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

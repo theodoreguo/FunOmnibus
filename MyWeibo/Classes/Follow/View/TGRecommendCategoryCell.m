@@ -21,6 +21,7 @@
 - (void)awakeFromNib {
 //    [super awakeFromNib];
     self.backgroundColor = TGRGBColor(244, 244, 244);
+    self.selectedIndicator.backgroundColor = TGRGBColor(219, 21, 26);
 //    self.textLabel.textColor = TGRGBColor(78, 78, 78);
 //    self.textLabel.highlightedTextColor = TGRGBColor(219, 21, 26);
     
@@ -47,7 +48,7 @@
     [super setSelected:selected animated:animated];
     
     self.selectedIndicator.hidden = !selected;
-    self.textLabel.textColor = selected ? TGRGBColor(219, 21, 26) : TGRGBColor(78, 78, 78);
+    self.textLabel.textColor = selected ? self.selectedIndicator.backgroundColor : TGRGBColor(78, 78, 78);
 }
 
 @end

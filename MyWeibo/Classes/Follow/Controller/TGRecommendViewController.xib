@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TGRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="afd-pi-qQn" id="Z33-sc-sMM"/>
+                <outlet property="userTableView" destination="x4i-di-4Cg" id="NCN-4T-LUB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,12 +28,24 @@
                         <outlet property="delegate" destination="-1" id="tjt-cj-hwd"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x4i-di-4Cg" userLabel="Right">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HOW-3v-lLr"/>
+                        <outlet property="delegate" destination="-1" id="SVR-mW-Sot"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="afd-pi-qQn" secondAttribute="bottom" id="56k-rR-O7E"/>
                 <constraint firstItem="afd-pi-qQn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7V2-x8-bXe"/>
+                <constraint firstAttribute="trailing" secondItem="x4i-di-4Cg" secondAttribute="trailing" id="BLa-xd-CWD"/>
+                <constraint firstItem="x4i-di-4Cg" firstAttribute="leading" secondItem="afd-pi-qQn" secondAttribute="trailing" id="ODC-gB-Pse"/>
+                <constraint firstAttribute="bottom" secondItem="x4i-di-4Cg" secondAttribute="bottom" id="mfY-pk-UYk"/>
                 <constraint firstItem="afd-pi-qQn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sXG-Ji-orY"/>
+                <constraint firstItem="x4i-di-4Cg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zyt-Ld-bG9"/>
             </constraints>
         </view>
     </objects>
