@@ -20,5 +20,9 @@
 
 // User data corresponding to this category
 @property (nonatomic, strong) NSMutableArray *users;
+// Total users count
+@property (nonatomic, assign) NSInteger total;
+// Current page number
+@property (nonatomic, assign) NSInteger currentPageNumber;
 
 @end
