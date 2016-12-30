@@ -57,7 +57,7 @@ static NSString *const TGUserId = @"user";
     [super viewDidLoad];
     
     // Initialization
-    [self setTableView];
+    [self setUpTableView];
     
     // Add refresh widget
     [self setupRefresh];
@@ -75,7 +75,7 @@ static NSString *const TGUserId = @"user";
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD show];
     
-    // Send requests to load left part data
+    // Send request to load left part data
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"category";
     params[@"c"] = @"subscribe";
@@ -106,7 +106,7 @@ static NSString *const TGUserId = @"user";
 /**
  *  Initialization
  */
-- (void)setTableView {
+- (void)setUpTableView {
     // Register
     [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TGRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:TGCategoryId];
     [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TGRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:TGUserId];
@@ -141,7 +141,7 @@ static NSString *const TGUserId = @"user";
     // Set current page number equal to 1
     rc.currentPageNumber = 1;
     
-    // Send requests to load right part data
+    // Send request to load right part data
     // Request parameters
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -196,7 +196,7 @@ static NSString *const TGUserId = @"user";
 - (void)loadMoreUsers {
     TGRecommendCategory *category = TGSelectedCategory;
     
-    // Send requests to load right part data
+    // Send request to load right part data
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";

@@ -35,8 +35,18 @@
     _user = user;
     
     self.nicknameLabel.text = user.screen_name;
-    self.fanQuantityLabel.text = [NSString stringWithFormat:@"%zd FOLLOWERS", user.fans_count];
+    
+    NSString *fansCount = nil;
+    if (user.fans_count < 10000) {
+        fansCount = [NSString stringWithFormat:@"%zd FOLLOWERS", user.fans_count];
+    } else { // > = 10K
+        fansCount = [NSString stringWithFormat:@"%.1fK FOLLOWERS", user.fans_count / 1000.0];
+    }
+    self.fanQuantityLabel.text = fansCount;
+    
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    
 }
 
 @end

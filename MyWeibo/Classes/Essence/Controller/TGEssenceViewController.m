@@ -8,6 +8,7 @@
 
 #import "TGEssenceViewController.h"
 #import "TGTestViewController.h"
+#import "TGRecommendTagViewController.h"
 
 @interface TGEssenceViewController ()
 
@@ -38,7 +39,8 @@
 }
 
 - (void)tagClick {
-    TGLogFunc;
+    TGRecommendTagViewController *tag = [[TGRecommendTagViewController alloc] init];
+    [self.navigationController pushViewController:tag animated:YES];
 }
 
 /*

@@ -17,6 +17,10 @@
 		104B2EAB1E12C09F00163214 /* TGRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 104B2EA91E12C09F00163214 /* TGRecommendUserCell.xib */; };
 		104B2EAE1E12C7DE00163214 /* TGRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 104B2EAD1E12C7DE00163214 /* TGRecommendUser.m */; };
 		105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE5B1E0BD4F4003A948D /* Assets.xcassets */; };
+		10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */; };
+		10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97E81E160682007390DA /* TGRecommendTag.m */; };
+		10CB97ED1E1610B6007390DA /* TGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97EB1E1610B6007390DA /* TGRecommendTagCell.m */; };
+		10CB97EE1E1610B6007390DA /* TGRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10CB97EC1E1610B6007390DA /* TGRecommendTagCell.xib */; };
 		10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC21E10171100130BFB /* TGEssenceViewController.m */; };
 		10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC81E10171100130BFB /* TGFollowViewController.m */; };
 		10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CCE1E10171100130BFB /* TGLatestViewController.m */; };
@@ -51,6 +55,13 @@
 		105EEE4C1E0BD4F3003A948D /* MyWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105EEE5B1E0BD4F4003A948D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105EEE601E0BD4F4003A948D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10CB97E41E15FF90007390DA /* TGRecommendTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTagViewController.h; sourceTree = "<group>"; };
+		10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendTagViewController.m; sourceTree = "<group>"; };
+		10CB97E71E160682007390DA /* TGRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTag.h; sourceTree = "<group>"; };
+		10CB97E81E160682007390DA /* TGRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendTag.m; sourceTree = "<group>"; };
+		10CB97EA1E1610B6007390DA /* TGRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTagCell.h; sourceTree = "<group>"; };
+		10CB97EB1E1610B6007390DA /* TGRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendTagCell.m; sourceTree = "<group>"; };
+		10CB97EC1E1610B6007390DA /* TGRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRecommendTagCell.xib; sourceTree = "<group>"; };
 		10F19CC11E10171100130BFB /* TGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGEssenceViewController.h; sourceTree = "<group>"; };
 		10F19CC21E10171100130BFB /* TGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGEssenceViewController.m; sourceTree = "<group>"; };
 		10F19CC71E10171100130BFB /* TGFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGFollowViewController.h; sourceTree = "<group>"; };
@@ -157,6 +168,8 @@
 			children = (
 				10F19CC11E10171100130BFB /* TGEssenceViewController.h */,
 				10F19CC21E10171100130BFB /* TGEssenceViewController.m */,
+				10CB97E41E15FF90007390DA /* TGRecommendTagViewController.h */,
+				10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +177,8 @@
 		10F19CC31E10171100130BFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				10CB97E71E160682007390DA /* TGRecommendTag.h */,
+				10CB97E81E160682007390DA /* TGRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +186,9 @@
 		10F19CC41E10171100130BFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10CB97EA1E1610B6007390DA /* TGRecommendTagCell.h */,
+				10CB97EB1E1610B6007390DA /* TGRecommendTagCell.m */,
+				10CB97EC1E1610B6007390DA /* TGRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,6 +437,7 @@
 				100A7F2D1E116EC500394669 /* TGRecommendViewController.xib in Resources */,
 				105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */,
 				104B2EAB1E12C09F00163214 /* TGRecommendUserCell.xib in Resources */,
+				10CB97EE1E1610B6007390DA /* TGRecommendTagCell.xib in Resources */,
 				101E64F01E1224AF00DF03A1 /* TGRecommendCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,13 +505,16 @@
 				10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */,
 				104B2EAE1E12C7DE00163214 /* TGRecommendUser.m in Sources */,
 				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
+				10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */,
 				101E64EF1E1224AF00DF03A1 /* TGRecommendCategoryCell.m in Sources */,
+				10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */,
 				10F3B2871E10C99800BFB8D8 /* TGTestViewController.m in Sources */,
 				10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */,
 				104B2EAA1E12C09F00163214 /* TGRecommendUserCell.m in Sources */,
 				10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */,
 				10F19CEC1E10171100130BFB /* TGMeViewController.m in Sources */,
 				10F19CEF1E10171100130BFB /* UIView+FixViewDebugging.m in Sources */,
+				10CB97ED1E1610B6007390DA /* TGRecommendTagCell.m in Sources */,
 				10F19CED1E10171100130BFB /* AppDelegate.m in Sources */,
 				10F19CF31E10171100130BFB /* TGTabBar.m in Sources */,
 				10F19CF11E10171100130BFB /* TGTabBarController.m in Sources */,
