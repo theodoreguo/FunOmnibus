@@ -31,7 +31,7 @@
     followButton.size = followButton.currentBackgroundImage.size;
     [followButton addTarget:self action:@selector(followClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:followButton];
-    */
+     */
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highlightedImage:@"friendsRecommentIcon-click" target:self action:@selector(followClick)];
     
     // Set background color
@@ -54,6 +54,6 @@
     vc.view.backgroundColor = TGRGBColor(200, 100, 50);
     [self.navigationController pushViewController:vc animated:YES];
 }
-*/
+ */
 
 @end

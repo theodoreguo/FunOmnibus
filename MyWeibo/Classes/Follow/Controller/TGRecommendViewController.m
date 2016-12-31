@@ -287,7 +287,7 @@ static NSString *const TGUserId = @"user";
     // End refreshing
     [self.userTableView.mj_header endRefreshing];
     [self.userTableView.mj_footer endRefreshing];
-    */
+     */
     
     TGRecommendCategory *c = self.categories[indexPath.row];
     
@@ -339,7 +339,7 @@ static NSString *const TGUserId = @"user";
             TGLog(@"%@", error);
         }];
 #pragma clang diagnostic pop
-        */
+         */
     }
 }
 

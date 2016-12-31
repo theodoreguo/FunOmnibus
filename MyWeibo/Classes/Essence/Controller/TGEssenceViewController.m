@@ -31,7 +31,7 @@
     tagButton.size = tagButton.currentBackgroundImage.size;
     [tagButton addTarget:self action:@selector(tagClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tagButton];
-    */
+     */
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightedImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
     // Set background color
@@ -48,6 +48,6 @@
     TGTestViewController *vc = [[TGTestViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
-*/
+ */
 
 @end
