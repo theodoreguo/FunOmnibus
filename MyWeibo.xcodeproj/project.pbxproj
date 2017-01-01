@@ -25,6 +25,8 @@
 		10CB97F31E16B49A007390DA /* TGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10CB97F11E16B49A007390DA /* TGLoginRegisterViewController.xib */; };
 		10CB97F61E175C73007390DA /* TGVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97F51E175C73007390DA /* TGVerticalButton.m */; };
 		10CB97F91E179FBD007390DA /* TGPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97F81E179FBD007390DA /* TGPlaceholderTextField.m */; };
+		10CB97FC1E18DBF9007390DA /* TGPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97FB1E18DBF9007390DA /* TGPushGuideView.m */; };
+		10CB97FE1E18DC20007390DA /* TGPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10CB97FD1E18DC20007390DA /* TGPushGuideView.xib */; };
 		10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC21E10171100130BFB /* TGEssenceViewController.m */; };
 		10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC81E10171100130BFB /* TGFollowViewController.m */; };
 		10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CCE1E10171100130BFB /* TGLatestViewController.m */; };
@@ -73,6 +75,9 @@
 		10CB97F51E175C73007390DA /* TGVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGVerticalButton.m; sourceTree = "<group>"; };
 		10CB97F71E179FBD007390DA /* TGPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPlaceholderTextField.h; sourceTree = "<group>"; };
 		10CB97F81E179FBD007390DA /* TGPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPlaceholderTextField.m; sourceTree = "<group>"; };
+		10CB97FA1E18DBF9007390DA /* TGPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPushGuideView.h; sourceTree = "<group>"; };
+		10CB97FB1E18DBF9007390DA /* TGPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPushGuideView.m; sourceTree = "<group>"; };
+		10CB97FD1E18DC20007390DA /* TGPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGPushGuideView.xib; sourceTree = "<group>"; };
 		10F19CC11E10171100130BFB /* TGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGEssenceViewController.h; sourceTree = "<group>"; };
 		10F19CC21E10171100130BFB /* TGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGEssenceViewController.m; sourceTree = "<group>"; };
 		10F19CC71E10171100130BFB /* TGFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGFollowViewController.h; sourceTree = "<group>"; };
@@ -369,6 +374,9 @@
 			children = (
 				10F19CE71E10171100130BFB /* TGTabBar.h */,
 				10F19CE81E10171100130BFB /* TGTabBar.m */,
+				10CB97FA1E18DBF9007390DA /* TGPushGuideView.h */,
+				10CB97FB1E18DBF9007390DA /* TGPushGuideView.m */,
+				10CB97FD1E18DC20007390DA /* TGPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -451,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CB97FE1E18DC20007390DA /* TGPushGuideView.xib in Resources */,
 				10073BCD1E114ADB00CA0379 /* TGFollowViewController.xib in Resources */,
 				100A7F2D1E116EC500394669 /* TGRecommendViewController.xib in Resources */,
 				105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */,
@@ -525,6 +534,7 @@
 				10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */,
 				104B2EAE1E12C7DE00163214 /* TGRecommendUser.m in Sources */,
 				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
+				10CB97FC1E18DBF9007390DA /* TGPushGuideView.m in Sources */,
 				10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */,
 				101E64EF1E1224AF00DF03A1 /* TGRecommendCategoryCell.m in Sources */,
 				10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */,

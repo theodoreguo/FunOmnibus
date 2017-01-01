@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TGTabBarController.h"
+#import "TGPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
     
     // Show window
     [self.window makeKeyAndVisible];
+    
+    // Show push guide
+    [TGPushGuideView show];
     
     return YES;
 }
