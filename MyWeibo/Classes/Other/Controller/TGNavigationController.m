@@ -47,19 +47,22 @@
         button.size = CGSizeMake(70, 30);
 //        [button sizeToFit];
 //        button.backgroundColor = [UIColor blueColor];
+        
         // Make button content move outside of its default region
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+        
         // Set button content left-aligned
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+        
         // Monitor button click event
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+        
         // Hide tabBar
         viewController.hidesBottomBarWhenPushed = YES;
     }
-    
     
     // Ensure viewController can override the leftBarButtonItem set up above
     [super pushViewController:viewController animated:animated];

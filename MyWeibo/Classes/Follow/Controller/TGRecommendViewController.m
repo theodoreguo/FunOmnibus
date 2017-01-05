@@ -60,7 +60,7 @@ static NSString *const TGUserId = @"user";
     [self setUpTableView];
     
     // Add refresh widget
-    [self setupRefresh];
+    [self setUpRefresh];
 
     // Load data of left recommendation category part
     [self loadCategories];
@@ -127,14 +127,15 @@ static NSString *const TGUserId = @"user";
 /**
  *  Add refresh widget
  */
-- (void)setupRefresh {
+- (void)setUpRefresh {
     self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
     
     self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
-    self.userTableView.mj_footer.hidden = YES;
+//    self.userTableView.mj_footer.hidden = YES;
 }
 
 #pragma mark - Load user data
+
 - (void)loadNewUsers {
     TGRecommendCategory *rc = TGSelectedCategory;
     
