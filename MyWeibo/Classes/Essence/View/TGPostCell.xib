@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQr-Mv-1mw" userLabel="Post Time Label">
-                        <rect key="frame" x="63" y="39.5" width="28.5" height="13.5"/>
+                        <rect key="frame" x="63" y="39" width="28.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -140,8 +140,16 @@
                             <constraint firstItem="efI-Ss-y9C" firstAttribute="top" secondItem="m0a-Uw-AzY" secondAttribute="top" id="zgW-k6-hPO"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="N7c-yd-ECY" userLabel="Sina VIP Image View">
+                        <rect key="frame" x="44" y="44.5" width="14" height="13.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="Y7U-13-KzO"/>
+                            <constraint firstAttribute="width" constant="14" id="cp1-Yv-GKI"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="N7c-yd-ECY" firstAttribute="bottom" secondItem="j09-Dk-0RU" secondAttribute="bottom" constant="5" id="1yl-DG-yto"/>
                     <constraint firstItem="m0a-Uw-AzY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3MK-08-7e4"/>
                     <constraint firstItem="rOt-dc-93H" firstAttribute="top" secondItem="Cpu-DM-GZa" secondAttribute="top" id="5LG-yR-RWp"/>
                     <constraint firstItem="YQr-Mv-1mw" firstAttribute="bottom" secondItem="j09-Dk-0RU" secondAttribute="bottom" id="AcU-D5-U4M"/>
@@ -151,6 +159,7 @@
                     <constraint firstItem="Cpu-DM-GZa" firstAttribute="leading" secondItem="j09-Dk-0RU" secondAttribute="trailing" constant="10" id="Qa3-Ux-EGU"/>
                     <constraint firstItem="Cpu-DM-GZa" firstAttribute="top" secondItem="j09-Dk-0RU" secondAttribute="top" id="aGR-sB-Cc4"/>
                     <constraint firstAttribute="trailing" secondItem="rOt-dc-93H" secondAttribute="trailing" constant="10" id="hpW-fx-h0U"/>
+                    <constraint firstItem="N7c-yd-ECY" firstAttribute="trailing" secondItem="j09-Dk-0RU" secondAttribute="trailing" constant="5" id="tFT-r5-zzn"/>
                     <constraint firstItem="YQr-Mv-1mw" firstAttribute="leading" secondItem="Cpu-DM-GZa" secondAttribute="leading" id="ti2-zc-LHg"/>
                     <constraint firstAttribute="trailing" secondItem="m0a-Uw-AzY" secondAttribute="trailing" id="xGf-y6-9kS"/>
                 </constraints>
@@ -163,11 +172,13 @@
                 <outlet property="postTimeLabel" destination="YQr-Mv-1mw" id="ARv-qM-etg"/>
                 <outlet property="profileImageView" destination="j09-Dk-0RU" id="JOZ-LX-SR5"/>
                 <outlet property="repostButton" destination="efI-Ss-y9C" id="FRG-uP-7Ah"/>
+                <outlet property="sinaVView" destination="N7c-yd-ECY" id="Mrc-pG-VG6"/>
             </connections>
             <point key="canvasLocation" x="255.5" y="379.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>

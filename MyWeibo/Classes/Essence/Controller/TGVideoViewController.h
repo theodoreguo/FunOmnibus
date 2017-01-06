@@ -6,8 +6,8 @@
 //  Copyright © 2017 Theodore Guo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TGPostViewController.h"
 
-@interface TGVideoViewController : UITableViewController
+@interface TGVideoViewController : TGPostViewController
 
 @end

@@ -26,5 +26,7 @@
 @property (nonatomic, assign) NSInteger repost;
 // Comment quantity
 @property (nonatomic, assign) NSInteger comment;
+// Sina VIP
+@property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
 
 @end

@@ -37,6 +37,7 @@
 		10CB981A1E1E2F58007390DA /* TGPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB98181E1E2F58007390DA /* TGPostCell.m */; };
 		10CB981B1E1E2F58007390DA /* TGPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10CB98191E1E2F58007390DA /* TGPostCell.xib */; };
 		10CB981E1E1E8B63007390DA /* NSDate+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB981D1E1E8B63007390DA /* NSDate+TGExtension.m */; };
+		10CB98211E1F4556007390DA /* TGPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB98201E1F4556007390DA /* TGPostViewController.m */; };
 		10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC21E10171100130BFB /* TGEssenceViewController.m */; };
 		10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CC81E10171100130BFB /* TGFollowViewController.m */; };
 		10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CCE1E10171100130BFB /* TGLatestViewController.m */; };
@@ -106,6 +107,8 @@
 		10CB98191E1E2F58007390DA /* TGPostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGPostCell.xib; sourceTree = "<group>"; };
 		10CB981C1E1E8B63007390DA /* NSDate+TGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TGExtension.h"; sourceTree = "<group>"; };
 		10CB981D1E1E8B63007390DA /* NSDate+TGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TGExtension.m"; sourceTree = "<group>"; };
+		10CB981F1E1F4556007390DA /* TGPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPostViewController.h; sourceTree = "<group>"; };
+		10CB98201E1F4556007390DA /* TGPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPostViewController.m; sourceTree = "<group>"; };
 		10F19CC11E10171100130BFB /* TGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGEssenceViewController.h; sourceTree = "<group>"; };
 		10F19CC21E10171100130BFB /* TGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGEssenceViewController.m; sourceTree = "<group>"; };
 		10F19CC71E10171100130BFB /* TGFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGFollowViewController.h; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				10CB98091E1A41F0007390DA /* TGPictureViewController.m */,
 				10CB980B1E1A421A007390DA /* TGJokeViewController.h */,
 				10CB980C1E1A421A007390DA /* TGJokeViewController.m */,
+				10CB981F1E1F4556007390DA /* TGPostViewController.h */,
+				10CB98201E1F4556007390DA /* TGPostViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 				10CB97F61E175C73007390DA /* TGVerticalButton.m in Sources */,
 				10CB981E1E1E8B63007390DA /* NSDate+TGExtension.m in Sources */,
 				10F19CF21E10171100130BFB /* main.m in Sources */,
+				10CB98211E1F4556007390DA /* TGPostViewController.m in Sources */,
 				101E64EB1E12208100DF03A1 /* TGRecommendCategory.m in Sources */,
 				10F19CEB1E10171100130BFB /* TGLatestViewController.m in Sources */,
 				100A7F2C1E116EC500394669 /* TGRecommendViewController.m in Sources */,

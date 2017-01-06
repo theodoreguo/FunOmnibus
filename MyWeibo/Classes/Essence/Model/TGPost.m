@@ -22,19 +22,19 @@
         if (postTime.isToday) { // Today
             NSDateComponents *cmps = [[NSDate date] deltaFrom:postTime];
             
-            if (cmps.hour >= 1) {
+            if (cmps.hour >= 1) { // Delta >= 1 hr
                 if (cmps.hour == 1) {
                     return [NSString stringWithFormat:@"%zd hr", cmps.hour];
                 } else {
                     return [NSString stringWithFormat:@"%zd hrs", cmps.hour];
                 }
-            } else if (cmps.minute >= 1) {
+            } else if (cmps.minute >= 1) { // 1 hr > Delta >= 1 min
                 if (cmps.minute == 1) {
                     return [NSString stringWithFormat:@"%zd min", cmps.minute];
                 } else {
                     return [NSString stringWithFormat:@"%zd mins", cmps.minute];
                 }
-            } else {
+            } else { // 1 min > Delta
                 return @"Just now";
             }
         } else if (postTime.isYesterday) { // Yesterday

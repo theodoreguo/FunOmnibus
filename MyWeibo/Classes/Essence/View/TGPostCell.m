@@ -26,7 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 // Comment
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
-
+// Sina VIP
+@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 
 @end
 
@@ -40,6 +41,9 @@
 
 - (void)setPost:(TGPost *)post {
     _post = post;
+
+    // Judge to show Sina VIP logo
+    self.sinaVView.hidden = !post.isSina_v;
     
     // Set profile
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:post.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
