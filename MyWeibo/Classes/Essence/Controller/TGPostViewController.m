@@ -31,10 +31,6 @@
 
 static NSString * const TGPostCellId = @"post";
 
-- (NSString *)type {
-    return nil; // Set post type
-}
-
 -(NSMutableArray *)posts {
     if (!_posts) {
         _posts = [NSMutableArray array];
@@ -100,7 +96,7 @@ static NSString * const TGPostCellId = @"post";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     self.params = params;
     
     // Send request
@@ -145,7 +141,7 @@ static NSString * const TGPostCellId = @"post";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
@@ -213,7 +209,10 @@ static NSString * const TGPostCellId = @"post";
 #pragma mark - Delegate method
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 200;
+    // Fetch post model
+    TGPost *post = self.posts[indexPath.row];
+    
+    return post.cellHeight;
 }
 
 @end

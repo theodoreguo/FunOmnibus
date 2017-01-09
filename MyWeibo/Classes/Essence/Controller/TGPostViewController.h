@@ -10,11 +10,7 @@
 
 @interface TGPostViewController : UITableViewController
 
-/**
- *  Post type (make subclass implement)
- *
- *  @return type value
- */
-- (NSString *)type;
+// Post type
+@property (nonatomic, assign) TGPostType type;
 
 @end

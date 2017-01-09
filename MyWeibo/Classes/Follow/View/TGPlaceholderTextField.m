@@ -77,6 +77,6 @@ static NSString * const TGPlaceholderColorKeyPath = @"_placeholderLabel.textColo
     // Set placeholder text color
     [self setValue:placeholderColor forKeyPath:TGPlaceholderColorKeyPath];
 }
- */
+*/
 
 @end

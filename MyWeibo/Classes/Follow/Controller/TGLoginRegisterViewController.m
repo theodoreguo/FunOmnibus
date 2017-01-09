@@ -32,7 +32,7 @@
     // Adjust text field corner
     self.loginButton.layer.cornerRadius = 5;
     self.loginButton.layer.masksToBounds = YES;
-     */
+    */
     
     /*
     // Text attribute
@@ -42,13 +42,13 @@
     // NSAttributedString:string with attributes (rich text technology)
     NSAttributedString *placeholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:attrs];
     self.usernameField.attributedPlaceholder = placeholder;
-     */
+    */
     
     /*
     NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc] initWithString:@"Username"];
     [placeholder setAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange(0, 7)];
     self.usernameField.attributedPlaceholder = placeholder;
-     */
+    */
 }
 
 // Show register dialog

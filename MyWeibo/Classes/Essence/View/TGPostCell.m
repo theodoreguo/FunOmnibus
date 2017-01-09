@@ -9,6 +9,7 @@
 #import "TGPostCell.h"
 #import "TGPost.h"
 #import <UIImageView+WebCache.h>
+#import "TGPostPictureView.h"
 
 @interface TGPostCell ()
 
@@ -28,10 +29,24 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 // Sina VIP
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
+// Text content
+@property (weak, nonatomic) IBOutlet UILabel *contentTextLabel;
+// Middle content of picture post
+@property (nonatomic, weak) TGPostPictureView *pictureView;
 
 @end
 
 @implementation TGPostCell
+
+- (TGPostPictureView *)pictureView {
+    if (! _pictureView) {
+        TGPostPictureView *pictureView = [TGPostPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     UIImageView *bgView = [[UIImageView alloc] init];
@@ -59,6 +74,18 @@
     [self setUpButtonTitle:self.dislikeButton count:post.cai placeholder:@"Dislike"];
     [self setUpButtonTitle:self.repostButton count:post.repost placeholder:@"Repost"];
     [self setUpButtonTitle:self.commentButton count:post.comment placeholder:@"Comment"];
+    
+    // Set content text
+    self.contentTextLabel.text = post.text;
+    
+    // Add corresponding content to cell middle part based on post type
+    if (post.type == TGPostTypePicture) { // Picture post
+        self.pictureView.post = post;
+        self.pictureView.frame = post.pictureViewFrame;
+    } else if (post.type == TGPostTypeVoice) { // Voice post
+//        self.voiceView.post = post;
+//        self.voiceView.frame = post.voiceViewFrame;
+    }
 }
 
 -(void)setUpButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder {
@@ -72,12 +99,10 @@
 }
 
 - (void)setFrame:(CGRect)frame {
-    static CGFloat margin = 10;
-    
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = TGPostCellMargin;
+    frame.size.width -= 2 * TGPostCellMargin;
+    frame.size.height -= TGPostCellMargin; // Set the margin between cells
+    frame.origin.y += TGPostCellMargin; // Set the first cell has margin to top title bar
     
     [super setFrame:frame];
 }

@@ -147,6 +147,12 @@
                             <constraint firstAttribute="width" constant="14" id="cp1-Yv-GKI"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fne-U5-7J7">
+                        <rect key="frame" x="18" y="63" width="345" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="N7c-yd-ECY" firstAttribute="bottom" secondItem="j09-Dk-0RU" secondAttribute="bottom" constant="5" id="1yl-DG-yto"/>
@@ -157,15 +163,19 @@
                     <constraint firstItem="j09-Dk-0RU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="GwC-1h-Gky"/>
                     <constraint firstItem="j09-Dk-0RU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="NDw-Yo-3xX"/>
                     <constraint firstItem="Cpu-DM-GZa" firstAttribute="leading" secondItem="j09-Dk-0RU" secondAttribute="trailing" constant="10" id="Qa3-Ux-EGU"/>
+                    <constraint firstItem="Fne-U5-7J7" firstAttribute="trailing" secondItem="rOt-dc-93H" secondAttribute="trailing" id="Wrh-ga-y0Z"/>
                     <constraint firstItem="Cpu-DM-GZa" firstAttribute="top" secondItem="j09-Dk-0RU" secondAttribute="top" id="aGR-sB-Cc4"/>
                     <constraint firstAttribute="trailing" secondItem="rOt-dc-93H" secondAttribute="trailing" constant="10" id="hpW-fx-h0U"/>
+                    <constraint firstItem="Fne-U5-7J7" firstAttribute="leading" secondItem="j09-Dk-0RU" secondAttribute="leading" id="oOy-XG-4el"/>
                     <constraint firstItem="N7c-yd-ECY" firstAttribute="trailing" secondItem="j09-Dk-0RU" secondAttribute="trailing" constant="5" id="tFT-r5-zzn"/>
                     <constraint firstItem="YQr-Mv-1mw" firstAttribute="leading" secondItem="Cpu-DM-GZa" secondAttribute="leading" id="ti2-zc-LHg"/>
                     <constraint firstAttribute="trailing" secondItem="m0a-Uw-AzY" secondAttribute="trailing" id="xGf-y6-9kS"/>
+                    <constraint firstItem="Fne-U5-7J7" firstAttribute="top" secondItem="j09-Dk-0RU" secondAttribute="bottom" constant="10" id="zYo-gD-sr0"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentButton" destination="PD2-yP-urM" id="wL3-aJ-fa8"/>
+                <outlet property="contentTextLabel" destination="Fne-U5-7J7" id="sAu-bL-uth"/>
                 <outlet property="dislikeButton" destination="ZkN-uf-69S" id="4U0-W8-4YC"/>
                 <outlet property="likeButton" destination="ISZ-nK-hnQ" id="nyF-dp-tcz"/>
                 <outlet property="nameLabel" destination="Cpu-DM-GZa" id="HV0-zJ-pXr"/>

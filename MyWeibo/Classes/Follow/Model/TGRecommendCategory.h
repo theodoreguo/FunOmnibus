@@ -12,7 +12,7 @@
 @interface TGRecommendCategory : NSObject
 
 // id
-@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, assign) NSInteger ID;
 // count
 @property (nonatomic, assign) NSInteger count;
 // name

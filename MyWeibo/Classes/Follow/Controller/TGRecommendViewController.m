@@ -147,7 +147,7 @@ static NSString *const TGUserId = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(rc.id);
+    params[@"category_id"] = @(rc.ID);
     params[@"page"] = @(rc.currentPageNumber);
     self.params = params;
 #pragma clang diagnostic push
@@ -201,7 +201,7 @@ static NSString *const TGUserId = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(category.id);
+    params[@"category_id"] = @(category.ID);
     params[@"page"] = @(++category.currentPageNumber);
     self.params = params;
     
@@ -288,7 +288,7 @@ static NSString *const TGUserId = @"user";
     // End refreshing
     [self.userTableView.mj_header endRefreshing];
     [self.userTableView.mj_footer endRefreshing];
-     */
+    */
     
     TGRecommendCategory *c = self.categories[indexPath.row];
     
@@ -340,7 +340,7 @@ static NSString *const TGUserId = @"user";
             TGLog(@"%@", error);
         }];
 #pragma clang diagnostic pop
-         */
+        */
     }
 }
 

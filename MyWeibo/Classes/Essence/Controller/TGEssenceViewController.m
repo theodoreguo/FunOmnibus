@@ -8,11 +8,7 @@
 
 #import "TGEssenceViewController.h"
 #import "TGRecommendTagViewController.h"
-#import "TGAllViewController.h"
-#import "TGVideoViewController.h"
-#import "TGVoiceViewController.h"
-#import "TGPictureViewController.h"
-#import "TGJokeViewController.h"
+#import "TGPostViewController.h"
 
 @interface TGEssenceViewController () <UIScrollViewDelegate>
 
@@ -192,24 +188,29 @@
 
 // Initialize child view controller
 - (void)setUpChildVc {
-    TGAllViewController *all = [[TGAllViewController alloc] init];
+    TGPostViewController *all = [[TGPostViewController alloc] init];
     all.title = @"All";
+    all.type = TGPostTypeAll;
     [self addChildViewController:all];
     
-    TGVideoViewController *video = [[TGVideoViewController alloc] init];
+    TGPostViewController *video = [[TGPostViewController alloc] init];
     video.title = @"Video";
+    video.type = TGPostTypeVideo;
     [self addChildViewController:video];
     
-    TGVoiceViewController *voice = [[TGVoiceViewController alloc] init];
-    voice.title = @"Voice";
-    [self addChildViewController:voice];
+    TGPostViewController *audio = [[TGPostViewController alloc] init];
+    audio.title = @"Audio";
+    audio.type = TGPostTypeVoice;
+    [self addChildViewController:audio];
     
-    TGPictureViewController *picture = [[TGPictureViewController alloc] init];
+    TGPostViewController *picture = [[TGPostViewController alloc] init];
     picture.title = @"Picture";
+    picture.type = TGPostTypePicture;
     [self addChildViewController:picture];
     
-    TGJokeViewController *joke = [[TGJokeViewController alloc] init];
+    TGPostViewController *joke = [[TGPostViewController alloc] init];
     joke.title = @"Joke";
+    joke.type = TGPostTypeJoke;
     [self addChildViewController:joke];
 }
 
@@ -223,7 +224,7 @@
     TGTestViewController *vc = [[TGTestViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
- */
+*/
 
 #pragma mark - <UIScrollViewDelegate>
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
@@ -232,7 +233,7 @@
     // Current index
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
-    // Take out child view controllers
+    // Fetch child view controllers
     UIViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
     vc.view.y = 0; // Set controller view's y equal to 0 instead of 20 by default

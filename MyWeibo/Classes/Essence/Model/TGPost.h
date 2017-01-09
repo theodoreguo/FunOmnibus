@@ -6,7 +6,7 @@
 //  Copyright © 2017 Theodore Guo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TGPost : NSObject
 
@@ -28,5 +28,27 @@
 @property (nonatomic, assign) NSInteger comment;
 // Sina VIP
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+// Picture width
+@property (nonatomic, assign) CGFloat width;
+// Picture height
+@property (nonatomic, assign) CGFloat height;
+// Picture's URL - Small
+@property (nonatomic, copy) NSString *small_image;
+// Picture's URL - Middle
+@property (nonatomic, copy) NSString *middle_image;
+// Picture's URL - Larege
+@property (nonatomic, copy) NSString *large_image;
+// Post type
+@property (nonatomic, assign) TGPostType type;
+
+// Extra assistive properties
+// Cell height
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+// Picture view's frame
+@property (nonatomic, assign, readonly) CGRect pictureViewFrame;
+// Picture is too high or not
+@property (nonatomic, assign, getter=isTooHighPicture) BOOL tooHighPicture;
+// Picture download progress
+@property (nonatomic, assign) CGFloat pictureProgress;
 
 @end

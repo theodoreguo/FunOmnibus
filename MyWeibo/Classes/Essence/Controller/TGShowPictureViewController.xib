@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TGShowPictureViewController">
+            <connections>
+                <outlet property="progressView" destination="Iow-mQ-RSA" id="u2O-bp-6DZ"/>
+                <outlet property="scrollView" destination="ELi-AW-S7F" id="cpW-aX-Ftd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELi-AW-S7F">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-JI-z5i" userLabel="Back Button">
+                    <rect key="frame" x="15" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Vvf-Sg-v24"/>
+                        <constraint firstAttribute="width" constant="35" id="YsJ-Cd-DSh"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="kTb-8b-kq7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-ct-jrl" userLabel="Share Button">
+                    <rect key="frame" x="425" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="ACX-wZ-aKH"/>
+                        <constraint firstAttribute="height" constant="25" id="pzX-Bp-pUV"/>
+                    </constraints>
+                    <state key="normal" title="Share">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adm-RT-QVQ" userLabel="Save Button">
+                    <rect key="frame" x="510" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="fUV-ei-Wg7"/>
+                        <constraint firstAttribute="width" constant="70" id="ini-aY-fxq"/>
+                    </constraints>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="save" destination="-1" eventType="touchUpInside" id="aZ9-pe-B8q"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iow-mQ-RSA" userLabel="Progress View" customClass="TGProgressView">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="gQh-Tp-tY3"/>
+                        <constraint firstAttribute="width" constant="100" id="gUW-LV-ivV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ELi-AW-S7F" secondAttribute="trailing" id="4QV-cJ-HwM"/>
+                <constraint firstItem="oUN-JI-z5i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="93M-YR-Tma"/>
+                <constraint firstAttribute="bottom" secondItem="y1o-ct-jrl" secondAttribute="bottom" constant="20" id="DQ8-9e-dsj"/>
+                <constraint firstAttribute="bottom" secondItem="ELi-AW-S7F" secondAttribute="bottom" id="H7e-Hr-TcS"/>
+                <constraint firstAttribute="bottom" secondItem="adm-RT-QVQ" secondAttribute="bottom" constant="20" id="Nu0-ov-2gp"/>
+                <constraint firstItem="adm-RT-QVQ" firstAttribute="leading" secondItem="y1o-ct-jrl" secondAttribute="trailing" constant="15" id="R6n-Tb-bPP"/>
+                <constraint firstItem="ELi-AW-S7F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wis-JN-3tg"/>
+                <constraint firstAttribute="trailing" secondItem="ELi-AW-S7F" secondAttribute="trailing" id="Yyk-aA-gqm"/>
+                <constraint firstItem="ELi-AW-S7F" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZNf-eM-EK8"/>
+                <constraint firstAttribute="trailing" secondItem="adm-RT-QVQ" secondAttribute="trailing" constant="20" id="az2-qU-PKS"/>
+                <constraint firstItem="ELi-AW-S7F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fh2-eI-E77"/>
+                <constraint firstItem="Iow-mQ-RSA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mow-LW-a3n"/>
+                <constraint firstAttribute="bottom" secondItem="ELi-AW-S7F" secondAttribute="bottom" id="qPR-MS-CYv"/>
+                <constraint firstItem="Iow-mQ-RSA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="v7C-lC-D32"/>
+                <constraint firstItem="oUN-JI-z5i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="xgv-C6-ofo"/>
+                <constraint firstItem="ELi-AW-S7F" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y1E-ep-WJm"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Wis-JN-3tg"/>
+                    <exclude reference="Yyk-aA-gqm"/>
+                    <exclude reference="qPR-MS-CYv"/>
+                    <exclude reference="y1E-ep-WJm"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

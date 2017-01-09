@@ -48,18 +48,20 @@
  *  @return comparison result
  */
 - (BOOL)isToday {
-//    // Option 1
-//    // Calendar
-//    NSCalendar *calendar = [NSCalendar currentCalendar];
-//    
-//    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
-//    
-//    NSDateComponents *nowCmps = [calendar components:unit fromDate:[NSDate date]];
-//    NSDateComponents *selfCmps = [calendar components:unit fromDate:self];
-//    
-//    return nowCmps.year == selfCmps.year
-//    && nowCmps.month == selfCmps.month
-//    && nowCmps.day == selfCmps.day;
+    /*
+    // Option 1
+    // Calendar
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    
+    NSDateComponents *nowCmps = [calendar components:unit fromDate:[NSDate date]];
+    NSDateComponents *selfCmps = [calendar components:unit fromDate:self];
+    
+    return nowCmps.year == selfCmps.year
+    && nowCmps.month == selfCmps.month
+    && nowCmps.day == selfCmps.day;
+    */
     
     // Option 2
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
