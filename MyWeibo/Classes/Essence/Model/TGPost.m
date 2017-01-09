@@ -58,7 +58,7 @@
         } else if (postTime.isYesterday) { // Yesterday
             fmt.dateFormat = @"'Yesterday' HH:mm:ss";
             return [fmt stringFromDate:postTime];
-        } else { // Others
+        } else { // Other
             fmt.dateFormat = @"MM-dd HH:mm:ss";
             return [fmt stringFromDate:postTime];
         }
