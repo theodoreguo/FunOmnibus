@@ -96,21 +96,19 @@ static NSString * const TGCommentId = @"comment";
     params[@"c"] = @"comment";
     params[@"data_id"] = self.post.ID;
     params[@"hot"] = @"1";
-//    self.params = params;
     
     // Send request
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
-//        // Request expired
-//        if (self.params != params) return;
-//        
-//        // Store maxtime
-//        self.maxtime = responseObject[@"info"][@"maxtime"];
-//        
-//        // Convert dictionary array to model array
-//        self.posts = [TGPost mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-//        
+        // Return if there is no comment
+        if (![responseObject isKindOfClass:[NSArray class]]) {
+            // End refreshing
+            [self.tableView.mj_header endRefreshing];
+            
+            return;
+        }
+        
         // Convert dictionary array to model array
         self.topComments = [TGComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         self.latestComments = [TGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
@@ -130,9 +128,6 @@ static NSString * const TGCommentId = @"comment";
             self.tableView.mj_footer.hidden = YES;
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        // Request expired
-//        if (self.params != params) return;
-        
         // End refreshing
         [self.tableView.mj_header endRefreshing];
     }];
@@ -162,6 +157,13 @@ static NSString * const TGCommentId = @"comment";
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
+        // Return if there is no comment
+        if (![responseObject isKindOfClass:[NSArray class]]) {
+            self.tableView.mj_footer.hidden = YES;
+            
+            return;
+        }
+        
         // Convert dictionary array to model array
         NSArray *newComments = [TGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latestComments addObjectsFromArray:newComments];
@@ -283,12 +285,6 @@ static NSString * const TGCommentId = @"comment";
     [self.manager invalidateSessionCancelingTasks:YES]; // Disable session
 }
 
-#pragma mark - <UITableViewDelegate>
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [self.view endEditing:YES];
-}
-
 #pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -391,6 +387,9 @@ static NSString * const TGCommentId = @"comment";
 }
 */
 
+/**
+ *  Set each section's title
+ */
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     // Acquire header from buffer pool
     TGCommentHeaderView *header = [TGCommentHeaderView headerViewWithTableView:tableView];
@@ -454,6 +453,61 @@ static NSString * const TGCommentId = @"comment";
  */
 - (TGComment *)commentInIndexPath:(NSIndexPath *)indexPath {
     return [self commentsInSection:indexPath.section][indexPath.row];
+}
+
+#pragma mark - <UITableViewDelegate>
+
+/**
+ *  Perform actions when dragging scroll view
+ */
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    // Disable text field editing once dragging
+    [self.view endEditing:YES];
+    
+    // Make shown menu controller invisible once dragging
+    [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+}
+
+/**
+ *  Perform actions when one table view cell is selected
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Create menu controller
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    
+    if (menu.isMenuVisible) {
+        // Set shown menu controller invisible
+        [menu setMenuVisible:NO animated:YES];
+    } else {
+        // Acquire the selected cell
+        TGCommentCell *cell = (TGCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        // Set the first responder
+        [cell becomeFirstResponder];
+        
+        // Show menu controller
+        UIMenuItem *like = [[UIMenuItem alloc] initWithTitle:@"Like" action:@selector(Like:)];
+        UIMenuItem *reply = [[UIMenuItem alloc] initWithTitle:@"Reply" action:@selector(Reply:)];
+        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"Report" action:@selector(Report:)];
+        menu.menuItems = @[like, reply, report];
+        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+    }
+}
+
+#pragma mark - Menu items processing
+
+- (void)Like:(UIMenuController *)menu {
+    TGLog(@"%s %@", __func__, menu);
+}
+
+- (void)Reply:(UIMenuController *)menu {
+    TGLog(@"%s %@", __func__, menu);
+}
+
+- (void)Report:(UIMenuController *)menu {
+    TGLog(@"%s %@", __func__, menu);
 }
 
 @end

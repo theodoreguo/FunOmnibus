@@ -11,7 +11,7 @@
 #import "TGPushGuideView.h"
 #import "TGScrollTopWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -26,7 +26,9 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // Set window's root controller
-    self.window.rootViewController = [[TGTabBarController alloc] init];
+    TGTabBarController *tabBarController = [[TGTabBarController alloc] init];
+    tabBarController.delegate = self;
+    self.window.rootViewController = tabBarController;
     
     // Show window
     [self.window makeKeyAndVisible];
@@ -35,6 +37,13 @@
     [TGPushGuideView show];
     
     return YES;
+}
+
+#pragma mark - <UITabBarControllerDelegate>
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    // Send a notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:TGTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

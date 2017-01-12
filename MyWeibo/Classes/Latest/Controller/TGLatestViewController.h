@@ -6,8 +6,8 @@
 //  Copyright © 2016 Theodore Guo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TGEssenceViewController.h"
 
-@interface TGLatestViewController : UIViewController
+@interface TGLatestViewController : TGEssenceViewController
 
 @end

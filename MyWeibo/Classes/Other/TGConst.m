@@ -24,3 +24,10 @@ NSString * const TGUserSexFemale = @"f";
 
 // Essence - Cell - Top comment title height
 CGFloat const TGPostCellTopCmtTitleH = 20;
+
+// Tab bar - The notification sent when the tab bar is selected
+NSString * const TGTabBarDidSelectNotification = @"TGTabBarDidSelectNotification";
+// Tab bar - The index key of the selected controller
+NSString * const TGSelectedControllerIndexKey = @"TGSelectedControllerIndexKey";
+// Tab bar - The key of the selected controller
+NSString * const TGSelectedControllerKey = @"TGSelectedControllerKey";

@@ -44,9 +44,8 @@
     }
     self.fanQuantityLabel.text = fansCount;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    
-    
+    [self.profileImageView setProfile:user.header];
+
 }
 
 @end

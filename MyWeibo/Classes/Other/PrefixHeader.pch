@@ -16,6 +16,8 @@
 #import "UIBarButtonItem+TGExtension.h"
 #import "TGConst.h"
 #import "NSDate+TGExtension.h"
+#import "UIImage+TGExtension.h"
+#import "UIImageView+TGSetProfile.h"
 
 #ifdef DEBUG
 #define TGLog(...) NSLog(__VA_ARGS__)

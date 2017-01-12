@@ -14,6 +14,7 @@
 #import <MJRefresh.h>
 #import "TGPostCell.h"
 #import "TGCommentViewController.h"
+#import "TGLatestViewController.h"
 
 @interface TGPostViewController ()
 
@@ -25,6 +26,9 @@
 @property (nonatomic, copy) NSString *maxtime;
 // Last request parameters
 @property (nonatomic, strong) NSDictionary *params;
+
+// Last selected tab bar controller's index
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 
 @end
 
@@ -65,6 +69,19 @@ static NSString * const TGPostCellId = @"post";
     
     // Register customised cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TGPostCell class]) bundle:nil] forCellReuseIdentifier:TGPostCellId];
+    
+    // Monitor tab bar selection notification
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:TGTabBarDidSelectNotification object:nil];
+}
+
+- (void)tabBarSelect {
+    // Refresh if the same tab bar controller is selected again and current tab content is showing in key window
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingInKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    // Save current selected controller's index
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 /**
@@ -84,6 +101,15 @@ static NSString * const TGPostCellId = @"post";
     //    self.tableView.mj_footer.hidden = YES;
 }
 
+#pragma mark - Param 'a'
+
+/**
+ *  Judge to assign corresponding parameter for Essence and Latest parts
+ */
+- (NSString *)a {
+    return [self.parentViewController isKindOfClass:[TGLatestViewController class]] ? @"newlist" : @"list";
+}
+
 #pragma mark - Data processing
 
 /**
@@ -95,7 +121,7 @@ static NSString * const TGPostCellId = @"post";
     
     // Request parameters
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
@@ -140,7 +166,7 @@ static NSString * const TGPostCellId = @"post";
     
     // Request parameters
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;

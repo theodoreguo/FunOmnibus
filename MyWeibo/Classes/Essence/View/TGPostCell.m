@@ -88,6 +88,10 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+//    // Set circle profile
+//    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
+//    self.profileImageView.layer.masksToBounds = YES;
 }
 
 - (void)setPost:(TGPost *)post {
@@ -97,7 +101,7 @@
     self.sinaVView.hidden = !post.isSina_v;
     
     // Set profile
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:post.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setProfile:post.profile_image];
     
     // Set nickname
     self.nameLabel.text = post.name;

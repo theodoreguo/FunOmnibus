@@ -30,17 +30,35 @@
 
 @implementation TGCommentCell
 
+/**
+ *  Returns a Boolean value indicating whether the receiver can become first responder
+ */
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+/**
+ *  Requests the receiving responder to enable or disable the specified command in the user interface
+ */
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    return NO;
+}
+
 - (void)awakeFromNib {
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+//    // Set round circle profile
+//    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
+//    self.profileImageView.layer.masksToBounds = YES;
 }
 
 - (void)setComment:(TGComment *)comment {
     _comment = comment;
     
-    // Acquire profile
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    // Set profile
+    [self.profileImageView setProfile:comment.user.profile_image];
     
     // Acquire sex info
     self.sexView.image = [comment.user.sex isEqualToString:TGUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];

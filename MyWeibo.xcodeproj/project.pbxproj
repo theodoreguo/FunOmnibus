@@ -29,6 +29,8 @@
 		10C43C901E263372005D50BE /* TGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C8E1E263372005D50BE /* TGCommentCell.m */; };
 		10C43C911E263372005D50BE /* TGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C43C8F1E263372005D50BE /* TGCommentCell.xib */; };
 		10C43C941E267CCF005D50BE /* TGScrollTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C931E267CCF005D50BE /* TGScrollTopWindow.m */; };
+		10C43C971E276AD3005D50BE /* UIImage+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C961E276AD3005D50BE /* UIImage+TGExtension.m */; };
+		10C43C9A1E2774A4005D50BE /* UIImageView+TGSetProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C991E2774A4005D50BE /* UIImageView+TGSetProfile.m */; };
 		10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */; };
 		10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97E81E160682007390DA /* TGRecommendTag.m */; };
 		10CB97ED1E1610B6007390DA /* TGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97EB1E1610B6007390DA /* TGRecommendTagCell.m */; };
@@ -105,6 +107,10 @@
 		10C43C8F1E263372005D50BE /* TGCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGCommentCell.xib; sourceTree = "<group>"; };
 		10C43C921E267CCF005D50BE /* TGScrollTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGScrollTopWindow.h; sourceTree = "<group>"; };
 		10C43C931E267CCF005D50BE /* TGScrollTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGScrollTopWindow.m; sourceTree = "<group>"; };
+		10C43C951E276AD3005D50BE /* UIImage+TGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TGExtension.h"; sourceTree = "<group>"; };
+		10C43C961E276AD3005D50BE /* UIImage+TGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TGExtension.m"; sourceTree = "<group>"; };
+		10C43C981E2774A4005D50BE /* UIImageView+TGSetProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TGSetProfile.h"; sourceTree = "<group>"; };
+		10C43C991E2774A4005D50BE /* UIImageView+TGSetProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TGSetProfile.m"; sourceTree = "<group>"; };
 		10CB97E41E15FF90007390DA /* TGRecommendTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTagViewController.h; sourceTree = "<group>"; };
 		10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendTagViewController.m; sourceTree = "<group>"; };
 		10CB97E71E160682007390DA /* TGRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTag.h; sourceTree = "<group>"; };
@@ -453,6 +459,10 @@
 				10F19CE01E10171100130BFB /* UIView+TGExtension.m */,
 				10CB981C1E1E8B63007390DA /* NSDate+TGExtension.h */,
 				10CB981D1E1E8B63007390DA /* NSDate+TGExtension.m */,
+				10C43C951E276AD3005D50BE /* UIImage+TGExtension.h */,
+				10C43C961E276AD3005D50BE /* UIImage+TGExtension.m */,
+				10C43C981E2774A4005D50BE /* UIImageView+TGSetProfile.h */,
+				10C43C991E2774A4005D50BE /* UIImageView+TGSetProfile.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -659,7 +669,9 @@
 				10CB97FC1E18DBF9007390DA /* TGPushGuideView.m in Sources */,
 				10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */,
 				101E64EF1E1224AF00DF03A1 /* TGRecommendCategoryCell.m in Sources */,
+				10C43C971E276AD3005D50BE /* UIImage+TGExtension.m in Sources */,
 				10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */,
+				10C43C9A1E2774A4005D50BE /* UIImageView+TGSetProfile.m in Sources */,
 				10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */,
 				104B2EAA1E12C09F00163214 /* TGRecommendUserCell.m in Sources */,
 				10C43C8C1E261ED8005D50BE /* TGCommentHeaderView.m in Sources */,

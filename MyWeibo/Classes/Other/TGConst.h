@@ -33,3 +33,10 @@ UIKIT_EXTERN NSString * const TGUserSexFemale;
 
 // Essence - Cell - Top comment title height
 UIKIT_EXTERN CGFloat const TGPostCellTopCmtTitleH;
+
+// Tab bar - The notification sent when the tab bar is selected
+UIKIT_EXTERN NSString * const TGTabBarDidSelectNotification;
+// Tab bar - The index key of the selected controller
+UIKIT_EXTERN NSString * const TGSelectedControllerIndexKey;
+// Tab bar - The key of the selected controller
+UIKIT_EXTERN NSString * const TGSelectedControllerKey;
