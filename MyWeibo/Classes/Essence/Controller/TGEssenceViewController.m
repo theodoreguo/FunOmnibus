@@ -162,14 +162,17 @@
     contentView.frame = self.view.bounds;
     
     // Set padding
+    /*
 //    CGFloat bottom = self.tabBarController.tabBar.height;
 //    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
 //    contentView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    */
     contentView.delegate = self;
     contentView.pagingEnabled = YES; // Enable scroll view pagging
     [self.view insertSubview:contentView atIndex:0];
     contentView.contentSize = CGSizeMake(contentView.width * self.childViewControllers.count, 0);
     self.contentView = contentView;
+    /*
 //    [contentView addSubview:[UIButton buttonWithType:UIButtonTypeContactAdd]];
     
 //    UISwitch *s = [[UISwitch alloc] init];
@@ -181,6 +184,7 @@
     //    contentView.width = self.view.width;
     //    contentView.y = 99;
     //    contentView.height = self.view.height - contentView.y - self.tabBarController.tabBar.height;
+    */
     
     // Add the first controller's view (i.e., All)
     [self scrollViewDidEndScrollingAnimation:contentView];
@@ -200,7 +204,7 @@
     
     TGPostViewController *audio = [[TGPostViewController alloc] init];
     audio.title = @"Audio";
-    audio.type = TGPostTypeVoice;
+    audio.type = TGPostTypeAudio;
     [self addChildViewController:audio];
     
     TGPostViewController *picture = [[TGPostViewController alloc] init];

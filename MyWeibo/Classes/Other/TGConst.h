@@ -5,7 +5,7 @@
 typedef enum {
     TGPostTypeAll = 1,
     TGPostTypeVideo = 41,
-    TGPostTypeVoice = 31,
+    TGPostTypeAudio = 31,
     TGPostTypePicture = 10,
     TGPostTypeJoke = 29
 }TGPostType;
@@ -26,3 +26,10 @@ UIKIT_EXTERN CGFloat const TGPostCellBottomBarH;
 UIKIT_EXTERN CGFloat const TGPostCellPictureMaxH;
 // Essence - Cell - Picture post's max displayed height when it exceeds stipulated max height
 UIKIT_EXTERN CGFloat const TGPostCellPictureMaxDisplayH;
+
+// TGUser model - Sex value
+UIKIT_EXTERN NSString * const TGUserSexMale;
+UIKIT_EXTERN NSString * const TGUserSexFemale;
+
+// Essence - Cell - Top comment title height
+UIKIT_EXTERN CGFloat const TGPostCellTopCmtTitleH;

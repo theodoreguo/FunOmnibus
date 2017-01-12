@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class TGComment;
+
 @interface TGPost : NSObject
 
+// ID
+@property (nonatomic, copy) NSString *ID;
 // Name
 @property (nonatomic, copy) NSString *name;
 // Profile
@@ -40,6 +44,14 @@
 @property (nonatomic, copy) NSString *large_image;
 // Post type
 @property (nonatomic, assign) TGPostType type;
+// Audio duration
+@property (nonatomic, assign) NSInteger voicetime;
+// Video duration
+@property (nonatomic, assign) NSInteger videotime;
+// Audio play times
+@property (nonatomic, assign) NSInteger playcount;
+// Top comment
+@property (nonatomic, strong) TGComment *top_cmt;
 
 // Extra assistive properties
 // Cell height
@@ -50,5 +62,9 @@
 @property (nonatomic, assign, getter=isTooHighPicture) BOOL tooHighPicture;
 // Picture download progress
 @property (nonatomic, assign) CGFloat pictureProgress;
+// Audio view's frame
+@property (nonatomic, assign, readonly) CGRect audioViewFrame;
+// Video view's frame
+@property (nonatomic, assign, readonly) CGRect videoViewFrame;
 
 @end

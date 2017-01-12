@@ -13,6 +13,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "TGPostCell.h"
+#import "TGCommentViewController.h"
 
 @interface TGPostViewController ()
 
@@ -212,7 +213,14 @@ static NSString * const TGPostCellId = @"post";
     // Fetch post model
     TGPost *post = self.posts[indexPath.row];
     
+    // Return the cell height of this model
     return post.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TGCommentViewController *cmtVc = [[TGCommentViewController alloc] init];
+    cmtVc.post = self.posts[indexPath.row];
+    [self.navigationController pushViewController:cmtVc animated:YES];
 }
 
 @end

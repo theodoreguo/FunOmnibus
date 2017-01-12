@@ -13,10 +13,22 @@
 		101E64EB1E12208100DF03A1 /* TGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 101E64EA1E12208100DF03A1 /* TGRecommendCategory.m */; };
 		101E64EF1E1224AF00DF03A1 /* TGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 101E64ED1E1224AF00DF03A1 /* TGRecommendCategoryCell.m */; };
 		101E64F01E1224AF00DF03A1 /* TGRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101E64EE1E1224AF00DF03A1 /* TGRecommendCategoryCell.xib */; };
+		102ACFA61E247EB4000B587A /* TGPostAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 102ACFA51E247EB4000B587A /* TGPostAudioView.m */; };
+		102ACFA81E247EF0000B587A /* TGPostAudioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102ACFA71E247EF0000B587A /* TGPostAudioView.xib */; };
 		104B2EAA1E12C09F00163214 /* TGRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 104B2EA81E12C09F00163214 /* TGRecommendUserCell.m */; };
 		104B2EAB1E12C09F00163214 /* TGRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 104B2EA91E12C09F00163214 /* TGRecommendUserCell.xib */; };
 		104B2EAE1E12C7DE00163214 /* TGRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 104B2EAD1E12C7DE00163214 /* TGRecommendUser.m */; };
 		105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EEE5B1E0BD4F4003A948D /* Assets.xcassets */; };
+		10C43C7C1E249CA2005D50BE /* TGPostVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C7B1E249CA2005D50BE /* TGPostVideoView.m */; };
+		10C43C7E1E249CB4005D50BE /* TGPostVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C43C7D1E249CB4005D50BE /* TGPostVideoView.xib */; };
+		10C43C811E24BD50005D50BE /* TGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C801E24BD50005D50BE /* TGUser.m */; };
+		10C43C841E24BED4005D50BE /* TGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C831E24BED4005D50BE /* TGComment.m */; };
+		10C43C881E24EC29005D50BE /* TGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C861E24EC29005D50BE /* TGCommentViewController.m */; };
+		10C43C891E24EC29005D50BE /* TGCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C43C871E24EC29005D50BE /* TGCommentViewController.xib */; };
+		10C43C8C1E261ED8005D50BE /* TGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C8B1E261ED8005D50BE /* TGCommentHeaderView.m */; };
+		10C43C901E263372005D50BE /* TGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C8E1E263372005D50BE /* TGCommentCell.m */; };
+		10C43C911E263372005D50BE /* TGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C43C8F1E263372005D50BE /* TGCommentCell.xib */; };
+		10C43C941E267CCF005D50BE /* TGScrollTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C43C931E267CCF005D50BE /* TGScrollTopWindow.m */; };
 		10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */; };
 		10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97E81E160682007390DA /* TGRecommendTag.m */; };
 		10CB97ED1E1610B6007390DA /* TGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB97EB1E1610B6007390DA /* TGRecommendTagCell.m */; };
@@ -52,7 +64,7 @@
 		10F19CF21E10171100130BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE41E10171100130BFB /* main.m */; };
 		10F19CF31E10171100130BFB /* TGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE81E10171100130BFB /* TGTabBar.m */; };
 		10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */; };
-		AEAFD4C45445A6DF97B20171 /* libPods-MyWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AC53B2D592F5815180798D /* libPods-MyWeibo.a */; };
+		C41B7E3FEA4B0E5129720292 /* libPods-MyWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97384614EDC304D2471BA623 /* libPods-MyWeibo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +77,9 @@
 		101E64EC1E1224AF00DF03A1 /* TGRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendCategoryCell.h; sourceTree = "<group>"; };
 		101E64ED1E1224AF00DF03A1 /* TGRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendCategoryCell.m; sourceTree = "<group>"; };
 		101E64EE1E1224AF00DF03A1 /* TGRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		102ACFA41E247EB4000B587A /* TGPostAudioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPostAudioView.h; sourceTree = "<group>"; };
+		102ACFA51E247EB4000B587A /* TGPostAudioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPostAudioView.m; sourceTree = "<group>"; };
+		102ACFA71E247EF0000B587A /* TGPostAudioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGPostAudioView.xib; sourceTree = "<group>"; };
 		104B2EA71E12C09F00163214 /* TGRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendUserCell.h; sourceTree = "<group>"; };
 		104B2EA81E12C09F00163214 /* TGRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendUserCell.m; sourceTree = "<group>"; };
 		104B2EA91E12C09F00163214 /* TGRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRecommendUserCell.xib; sourceTree = "<group>"; };
@@ -73,6 +88,23 @@
 		105EEE4C1E0BD4F3003A948D /* MyWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105EEE5B1E0BD4F4003A948D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105EEE601E0BD4F4003A948D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C43C7A1E249CA2005D50BE /* TGPostVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPostVideoView.h; sourceTree = "<group>"; };
+		10C43C7B1E249CA2005D50BE /* TGPostVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPostVideoView.m; sourceTree = "<group>"; };
+		10C43C7D1E249CB4005D50BE /* TGPostVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGPostVideoView.xib; sourceTree = "<group>"; };
+		10C43C7F1E24BD50005D50BE /* TGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGUser.h; sourceTree = "<group>"; };
+		10C43C801E24BD50005D50BE /* TGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGUser.m; sourceTree = "<group>"; };
+		10C43C821E24BED4005D50BE /* TGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGComment.h; sourceTree = "<group>"; };
+		10C43C831E24BED4005D50BE /* TGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGComment.m; sourceTree = "<group>"; };
+		10C43C851E24EC29005D50BE /* TGCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCommentViewController.h; sourceTree = "<group>"; };
+		10C43C861E24EC29005D50BE /* TGCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCommentViewController.m; sourceTree = "<group>"; };
+		10C43C871E24EC29005D50BE /* TGCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGCommentViewController.xib; sourceTree = "<group>"; };
+		10C43C8A1E261ED8005D50BE /* TGCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCommentHeaderView.h; sourceTree = "<group>"; };
+		10C43C8B1E261ED8005D50BE /* TGCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCommentHeaderView.m; sourceTree = "<group>"; };
+		10C43C8D1E263372005D50BE /* TGCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCommentCell.h; sourceTree = "<group>"; };
+		10C43C8E1E263372005D50BE /* TGCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCommentCell.m; sourceTree = "<group>"; };
+		10C43C8F1E263372005D50BE /* TGCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGCommentCell.xib; sourceTree = "<group>"; };
+		10C43C921E267CCF005D50BE /* TGScrollTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGScrollTopWindow.h; sourceTree = "<group>"; };
+		10C43C931E267CCF005D50BE /* TGScrollTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGScrollTopWindow.m; sourceTree = "<group>"; };
 		10CB97E41E15FF90007390DA /* TGRecommendTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTagViewController.h; sourceTree = "<group>"; };
 		10CB97E51E15FF90007390DA /* TGRecommendTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRecommendTagViewController.m; sourceTree = "<group>"; };
 		10CB97E71E160682007390DA /* TGRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRecommendTag.h; sourceTree = "<group>"; };
@@ -137,8 +169,8 @@
 		10F3B2821E10C4FC00BFB8D8 /* TGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGNavigationController.h; sourceTree = "<group>"; };
 		10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGNavigationController.m; sourceTree = "<group>"; };
 		2E06AD2C134C966DFF961837 /* Pods-MyWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		97384614EDC304D2471BA623 /* libPods-MyWeibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB89A4B1E960A19844976C50 /* Pods-MyWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo.debug.xcconfig"; sourceTree = "<group>"; };
-		F6AC53B2D592F5815180798D /* libPods-MyWeibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEAFD4C45445A6DF97B20171 /* libPods-MyWeibo.a in Frameworks */,
+				C41B7E3FEA4B0E5129720292 /* libPods-MyWeibo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +255,9 @@
 				10CB98271E20972D007390DA /* TGShowPictureViewController.h */,
 				10CB98281E20972D007390DA /* TGShowPictureViewController.m */,
 				10CB98291E20972D007390DA /* TGShowPictureViewController.xib */,
+				10C43C851E24EC29005D50BE /* TGCommentViewController.h */,
+				10C43C861E24EC29005D50BE /* TGCommentViewController.m */,
+				10C43C871E24EC29005D50BE /* TGCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,6 +269,10 @@
 				10CB97E81E160682007390DA /* TGRecommendTag.m */,
 				10CB98111E1D158D007390DA /* TGPost.h */,
 				10CB98121E1D158D007390DA /* TGPost.m */,
+				10C43C7F1E24BD50005D50BE /* TGUser.h */,
+				10C43C801E24BD50005D50BE /* TGUser.m */,
+				10C43C821E24BED4005D50BE /* TGComment.h */,
+				10C43C831E24BED4005D50BE /* TGComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +280,8 @@
 		10F19CC41E10171100130BFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10CB982C1E20A004007390DA /* TGProgressView.h */,
+				10CB982D1E20A004007390DA /* TGProgressView.m */,
 				10CB97EA1E1610B6007390DA /* TGRecommendTagCell.h */,
 				10CB97EB1E1610B6007390DA /* TGRecommendTagCell.m */,
 				10CB97EC1E1610B6007390DA /* TGRecommendTagCell.xib */,
@@ -250,8 +291,17 @@
 				10CB98221E1FA4F2007390DA /* TGPostPictureView.h */,
 				10CB98231E1FA4F2007390DA /* TGPostPictureView.m */,
 				10CB98251E1FA556007390DA /* TGPostPictureView.xib */,
-				10CB982C1E20A004007390DA /* TGProgressView.h */,
-				10CB982D1E20A004007390DA /* TGProgressView.m */,
+				102ACFA41E247EB4000B587A /* TGPostAudioView.h */,
+				102ACFA51E247EB4000B587A /* TGPostAudioView.m */,
+				102ACFA71E247EF0000B587A /* TGPostAudioView.xib */,
+				10C43C7A1E249CA2005D50BE /* TGPostVideoView.h */,
+				10C43C7B1E249CA2005D50BE /* TGPostVideoView.m */,
+				10C43C7D1E249CB4005D50BE /* TGPostVideoView.xib */,
+				10C43C8A1E261ED8005D50BE /* TGCommentHeaderView.h */,
+				10C43C8B1E261ED8005D50BE /* TGCommentHeaderView.m */,
+				10C43C8D1E263372005D50BE /* TGCommentCell.h */,
+				10C43C8E1E263372005D50BE /* TGCommentCell.m */,
+				10C43C8F1E263372005D50BE /* TGCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +479,8 @@
 				10CB97FA1E18DBF9007390DA /* TGPushGuideView.h */,
 				10CB97FB1E18DBF9007390DA /* TGPushGuideView.m */,
 				10CB97FD1E18DC20007390DA /* TGPushGuideView.xib */,
+				10C43C921E267CCF005D50BE /* TGScrollTopWindow.h */,
+				10C43C931E267CCF005D50BE /* TGScrollTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,7 +497,7 @@
 		9063B2903372089EA2A38DCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6AC53B2D592F5815180798D /* libPods-MyWeibo.a */,
+				97384614EDC304D2471BA623 /* libPods-MyWeibo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -511,14 +563,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C43C911E263372005D50BE /* TGCommentCell.xib in Resources */,
 				10CB98261E1FA556007390DA /* TGPostPictureView.xib in Resources */,
 				10CB97FE1E18DC20007390DA /* TGPushGuideView.xib in Resources */,
 				10073BCD1E114ADB00CA0379 /* TGFollowViewController.xib in Resources */,
 				100A7F2D1E116EC500394669 /* TGRecommendViewController.xib in Resources */,
+				10C43C891E24EC29005D50BE /* TGCommentViewController.xib in Resources */,
 				105EEE5C1E0BD4F4003A948D /* Assets.xcassets in Resources */,
+				102ACFA81E247EF0000B587A /* TGPostAudioView.xib in Resources */,
 				10CB982B1E20972D007390DA /* TGShowPictureViewController.xib in Resources */,
 				104B2EAB1E12C09F00163214 /* TGRecommendUserCell.xib in Resources */,
 				10CB97EE1E1610B6007390DA /* TGRecommendTagCell.xib in Resources */,
+				10C43C7E1E249CB4005D50BE /* TGPostVideoView.xib in Resources */,
 				101E64F01E1224AF00DF03A1 /* TGRecommendCategoryCell.xib in Resources */,
 				10CB98351E223B93007390DA /* TGPublishViewController.xib in Resources */,
 				10CB981B1E1E2F58007390DA /* TGPostCell.xib in Resources */,
@@ -581,6 +637,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102ACFA61E247EB4000B587A /* TGPostAudioView.m in Sources */,
+				10C43C881E24EC29005D50BE /* TGCommentViewController.m in Sources */,
 				10CB97F61E175C73007390DA /* TGVerticalButton.m in Sources */,
 				10CB981E1E1E8B63007390DA /* NSDate+TGExtension.m in Sources */,
 				10F19CF21E10171100130BFB /* main.m in Sources */,
@@ -591,10 +649,12 @@
 				100A7F2C1E116EC500394669 /* TGRecommendViewController.m in Sources */,
 				10F19CEE1E10171100130BFB /* UIBarButtonItem+TGExtension.m in Sources */,
 				10CB98161E1E0162007390DA /* TGConst.m in Sources */,
+				10C43C941E267CCF005D50BE /* TGScrollTopWindow.m in Sources */,
 				10F19CEA1E10171100130BFB /* TGFollowViewController.m in Sources */,
 				10CB982A1E20972D007390DA /* TGShowPictureViewController.m in Sources */,
 				10CB981A1E1E2F58007390DA /* TGPostCell.m in Sources */,
 				104B2EAE1E12C7DE00163214 /* TGRecommendUser.m in Sources */,
+				10C43C901E263372005D50BE /* TGCommentCell.m in Sources */,
 				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
 				10CB97FC1E18DBF9007390DA /* TGPushGuideView.m in Sources */,
 				10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */,
@@ -602,11 +662,15 @@
 				10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */,
 				10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */,
 				104B2EAA1E12C09F00163214 /* TGRecommendUserCell.m in Sources */,
+				10C43C8C1E261ED8005D50BE /* TGCommentHeaderView.m in Sources */,
 				10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */,
 				10CB982E1E20A004007390DA /* TGProgressView.m in Sources */,
+				10C43C841E24BED4005D50BE /* TGComment.m in Sources */,
 				10F19CEC1E10171100130BFB /* TGMeViewController.m in Sources */,
+				10C43C811E24BD50005D50BE /* TGUser.m in Sources */,
 				10F19CEF1E10171100130BFB /* UIView+FixViewDebugging.m in Sources */,
 				10CB97F91E179FBD007390DA /* TGPlaceholderTextField.m in Sources */,
+				10C43C7C1E249CA2005D50BE /* TGPostVideoView.m in Sources */,
 				10CB97ED1E1610B6007390DA /* TGRecommendTagCell.m in Sources */,
 				10CB98131E1D158D007390DA /* TGPost.m in Sources */,
 				10CB97F21E16B49A007390DA /* TGLoginRegisterViewController.m in Sources */,
@@ -659,7 +723,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,6 +762,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

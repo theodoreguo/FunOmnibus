@@ -90,4 +90,20 @@
     return self.center.y;
 }
 
+/**
+ *  Judge a widget is acctually showing in the key window's range or not (added to window, not hidden,
+ *  visible, intersected with window's bounds)
+ */
+- (BOOL)isShowingInKeyWindow {
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    // Calculate self's rectangle based on key window's coordinate origin which is top-left corner
+    // Coordinate conversion
+    CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];
+    // Acquire window's bounds
+    CGRect winBounds = keyWindow.bounds;
+    
+    return self.window == keyWindow && !self.isHidden && self.alpha > 0.01 && CGRectIntersectsRect(newFrame, winBounds);
+}
+
 @end

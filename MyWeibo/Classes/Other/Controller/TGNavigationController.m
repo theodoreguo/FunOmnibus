@@ -33,9 +33,6 @@
 
 /**
  *  Intercept all pushed controllers using this method
- *
- *  @param viewController viewController
- *  @param animated       animated
  */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.childViewControllers.count > 0) { // If the pushed controller is not the first one
@@ -60,7 +57,7 @@
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
         
-        // Hide tabBar
+        // Hide tab bar
         viewController.hidesBottomBarWhenPushed = YES;
     }
     

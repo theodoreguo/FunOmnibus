@@ -7,14 +7,16 @@
 //
 
 #import "TGPost.h"
-//#import <MJExtension.h>
+#import <MJExtension.h>
+//#import "TGComment.h"
+#import "TGComment.h"
+#import "TGUser.h"
 
 @interface TGPost ()
 
 {
     CGFloat _cellHeight;
-    CGRect _pictureViewFrame;
-} // It's needed when set "readonly" since no setter method will be automatically generated
+} // It's needed when property is set as "readonly" and the auto generated getter method is overridden (no setter method will be automatically generated)
 
 @end
 
@@ -24,9 +26,17 @@
     return @{
              @"small_image" : @"image0",
              @"middle_image" : @"image2",
-             @"large_image" : @"image1"
+             @"large_image" : @"image1",
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]"
              };
 }
+
+//// Convert NSArray to TGComment via mj_objectClassInArray
+//+ (NSDictionary *)mj_objectClassInArray {
+////    return @{@"top_cmt" : [TGComment class]};
+//    return @{@"top_cmt" : @"TGComment"};
+//}
 
 - (NSString *)create_time {
     // Date formatter class
@@ -76,7 +86,7 @@
         
         // Cell height
         // Text height
-        _cellHeight = TGPostCellTextY + textH + 2 * TGPostCellMargin; // Not sure why it's 2 * instead of 1 *
+        _cellHeight = TGPostCellTextY + textH + TGPostCellMargin;
         
         // Calculate cell height based on post type
         if (self.type == TGPostTypePicture) { // Picture post
@@ -91,14 +101,34 @@
             
             // Calculate picture view's frame
             CGFloat pictureX = TGPostCellMargin;
-            CGFloat pictureY = TGPostCellTextY + textH + 2 * TGPostCellMargin;
+            CGFloat pictureY = TGPostCellTextY + textH + TGPostCellMargin;
             _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
             _cellHeight += pictureH + TGPostCellMargin;
-        } else if (self.type == TGPostTypeVoice) { // Voice post
+        } else if (self.type == TGPostTypeAudio) { // Audio post
+            CGFloat audioX = TGPostCellMargin;
+            CGFloat audioY = TGPostCellTextY + textH + TGPostCellMargin;
+            CGFloat audioW = maxSize.width;
+            CGFloat audioH = audioW * self.height / self.width;
+            _audioViewFrame = CGRectMake(audioX, audioY, audioW, audioH);
             
+            _cellHeight += audioH + TGPostCellMargin;
+        } else if (self.type == TGPostTypeVideo) { // Video post
+            CGFloat videoX = TGPostCellMargin;
+            CGFloat videoY = TGPostCellTextY + textH + TGPostCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoViewFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + TGPostCellMargin;
         }
-
+        
+        // Top comment view height
+        if (self.top_cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += TGPostCellTopCmtTitleH + contentH + TGPostCellMargin;
+        }
         
         // Bottom tool bar height
         _cellHeight += TGPostCellBottomBarH + TGPostCellMargin;

@@ -10,6 +10,10 @@
 #import "TGPost.h"
 #import <UIImageView+WebCache.h>
 #import "TGPostPictureView.h"
+#import "TGPostAudioView.h"
+#import "TGPostVideoView.h"
+#import "TGComment.h"
+#import "TGUser.h"
 
 @interface TGPostCell ()
 
@@ -33,10 +37,22 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentTextLabel;
 // Middle content of picture post
 @property (nonatomic, weak) TGPostPictureView *pictureView;
+// Middle content of audio post
+@property (nonatomic, weak) TGPostAudioView *audioView;
+// Middle content of video post
+@property (nonatomic, weak) TGPostVideoView *videoView;
+// Top comment content
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+// Top comment view
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 
 @end
 
 @implementation TGPostCell
+
++ (instancetype)cell {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
 
 - (TGPostPictureView *)pictureView {
     if (! _pictureView) {
@@ -46,6 +62,26 @@
     }
     
     return _pictureView;
+}
+
+- (TGPostAudioView *)audioView {
+    if (! _audioView) {
+        TGPostAudioView *audioView = [TGPostAudioView audioView];
+        [self.contentView addSubview:audioView];
+        _audioView = audioView;
+    }
+    
+    return _audioView;
+}
+
+- (TGPostVideoView *)videoView {
+    if (! _videoView) {
+        TGPostVideoView *videoView = [TGPostVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    
+    return _videoView;
 }
 
 - (void)awakeFromNib {
@@ -80,11 +116,41 @@
     
     // Add corresponding content to cell middle part based on post type
     if (post.type == TGPostTypePicture) { // Picture post
+        self.pictureView.hidden = NO;
+        
         self.pictureView.post = post;
         self.pictureView.frame = post.pictureViewFrame;
-    } else if (post.type == TGPostTypeVoice) { // Voice post
-//        self.voiceView.post = post;
-//        self.voiceView.frame = post.voiceViewFrame;
+        
+        self.audioView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (post.type == TGPostTypeAudio) { // Audio post
+        self.audioView.hidden = NO;
+        
+        self.audioView.post = post;
+        self.audioView.frame = post.audioViewFrame;
+        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (post.type == TGPostTypeVideo) { // Video post
+        self.videoView.hidden = NO;
+        
+        self.videoView.post = post;
+        self.videoView.frame = post.videoViewFrame;
+        
+        self.pictureView.hidden = YES;
+        self.audioView.hidden = YES;
+    } else { // Joke post
+        self.pictureView.hidden = YES; // To solve cell reusable issue
+        self.audioView.hidden = YES;
+        self.videoView.hidden = YES;
+    }
+    
+    // Process top comment
+    if (self.post.top_cmt) {
+        self.topCmtView.hidden = NO; // To solve cell reusable issue
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", self.post.top_cmt.user.username, self.post.top_cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
     }
 }
 
@@ -101,10 +167,24 @@
 - (void)setFrame:(CGRect)frame {
     frame.origin.x = TGPostCellMargin;
     frame.size.width -= 2 * TGPostCellMargin;
-    frame.size.height -= TGPostCellMargin; // Set the margin between cells
+//    frame.size.height -= TGPostCellMargin; // Set the margin between cells
+    frame.size.height = self.post.cellHeight - TGPostCellMargin;
     frame.origin.y += TGPostCellMargin; // Set the first cell has margin to top title bar
     
     [super setFrame:frame];
+}
+
+// More button
+- (IBAction)more {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Favorite" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Report" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}]];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

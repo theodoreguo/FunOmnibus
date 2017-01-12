@@ -18,4 +18,7 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
+// Judge a widget is acctually showing in the key window's range or not
+- (BOOL)isShowingInKeyWindow;
+
 @end

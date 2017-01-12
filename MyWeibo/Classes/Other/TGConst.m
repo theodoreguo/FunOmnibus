@@ -11,9 +11,16 @@ CGFloat const TGPostCellMargin = 10;
 // Essence - Cell - Content text's y value
 CGFloat const TGPostCellTextY = 55;
 // Essence - Cell - Bottom tool bar's height
-CGFloat const TGPostCellBottomBarH = 44;
+CGFloat const TGPostCellBottomBarH = 35;
 
 // Essence - Cell - Picture post's max height
 CGFloat const TGPostCellPictureMaxH = 1000;
 // Essence - Cell - Picture post's max displayed height when it exceeds stipulated max height
 CGFloat const TGPostCellPictureMaxDisplayH = 350;
+
+// TGUser model - Sex value
+NSString * const TGUserSexMale = @"m";
+NSString * const TGUserSexFemale = @"f";
+
+// Essence - Cell - Top comment title height
+CGFloat const TGPostCellTopCmtTitleH = 20;

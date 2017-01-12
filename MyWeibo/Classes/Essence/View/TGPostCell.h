@@ -15,4 +15,6 @@
 // Post data
 @property (nonatomic, strong) TGPost *post;
 
++ (instancetype)cell;
+
 @end

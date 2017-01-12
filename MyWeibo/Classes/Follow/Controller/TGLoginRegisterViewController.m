@@ -7,6 +7,7 @@
 //
 
 #import "TGLoginRegisterViewController.h"
+#import "TGScrollTopWindow.h"
 
 @interface TGLoginRegisterViewController ()
 
@@ -22,7 +23,15 @@
 
 // Close login or register interface
 - (IBAction)close {
+    [TGScrollTopWindow show];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [TGScrollTopWindow hide];
 }
 
 - (void)viewDidLoad {
