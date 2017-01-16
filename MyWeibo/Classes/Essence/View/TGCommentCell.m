@@ -49,7 +49,7 @@
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
     
-//    // Set round circle profile
+//    // Set circle profile
 //    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
 //    self.profileImageView.layer.masksToBounds = YES;
 }

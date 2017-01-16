@@ -10,6 +10,7 @@
 #import "TGPublishViewController.h"
 
 @interface TGTabBar ()
+
 // publishButton
 @property (nonatomic, weak) UIButton *publishButton;
 

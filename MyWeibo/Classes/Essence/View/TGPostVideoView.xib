@@ -41,6 +41,9 @@
                         <constraint firstAttribute="width" constant="71" id="FgU-eA-6a7"/>
                     </constraints>
                     <state key="normal" backgroundImage="video-play"/>
+                    <connections>
+                        <action selector="playVideo" destination="iN0-l3-epB" eventType="touchUpInside" id="2zY-LI-OK5"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,6 +66,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="imageView" destination="epV-ac-j3U" id="fqc-AB-xPQ"/>
+                <outlet property="playButton" destination="Xfr-OW-eta" id="q2D-WQ-pVa"/>
                 <outlet property="playTimesLabel" destination="yaZ-Id-Orj" id="Kxh-Pv-qco"/>
                 <outlet property="videoDurationLabel" destination="4ef-P5-JTw" id="xtw-3M-3P4"/>
             </connections>

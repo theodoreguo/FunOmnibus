@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TGWebViewController">
+            <connections>
+                <outlet property="backItem" destination="SwK-Uw-moZ" id="Tke-ve-e7v"/>
+                <outlet property="forwardItem" destination="qAP-ST-yTn" id="8Ed-dw-Xy3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wES-z0-Ack"/>
+                <outlet property="webView" destination="xwP-IR-OKw" id="Rb0-n3-Sch"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwP-IR-OKw">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTY-kY-Eax">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="xHd-sy-ToT"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" title="←" id="SwK-Uw-moZ">
+                            <connections>
+                                <action selector="back:" destination="-1" id="zSN-cq-u81"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" title="→" id="qAP-ST-yTn">
+                            <connections>
+                                <action selector="forward:" destination="-1" id="A6E-Kb-5i9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="EPX-qr-yza"/>
+                        <barButtonItem systemItem="refresh" id="oqz-4H-Acr">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="vtq-ic-LEG"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xwP-IR-OKw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HeZ-Lq-NyJ"/>
+                <constraint firstItem="xwP-IR-OKw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SM6-gV-Aqt"/>
+                <constraint firstAttribute="trailing" secondItem="iTY-kY-Eax" secondAttribute="trailing" id="aAD-Rt-cNp"/>
+                <constraint firstAttribute="bottom" secondItem="iTY-kY-Eax" secondAttribute="bottom" id="dVB-xN-RCA"/>
+                <constraint firstItem="iTY-kY-Eax" firstAttribute="top" secondItem="xwP-IR-OKw" secondAttribute="bottom" id="mvZ-8x-3U0"/>
+                <constraint firstAttribute="trailing" secondItem="xwP-IR-OKw" secondAttribute="trailing" id="skg-iJ-TFE"/>
+                <constraint firstItem="iTY-kY-Eax" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xyJ-iQ-v5E"/>
+            </constraints>
+            <point key="canvasLocation" x="4" y="127"/>
+        </view>
+    </objects>
+</document>

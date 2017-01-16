@@ -69,9 +69,6 @@ static NSString * const TGCommentId = @"comment";
 - (void)setUpRefresh {
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     
-//    // Set transparence automatically
-//    self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    
     // Begin refreshing
     [self.tableView.mj_header beginRefreshing];
     
@@ -102,7 +99,7 @@ static NSString * const TGCommentId = @"comment";
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
         // Return if there is no comment
-        if (![responseObject isKindOfClass:[NSArray class]]) {
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
             // End refreshing
             [self.tableView.mj_header endRefreshing];
             
@@ -158,7 +155,7 @@ static NSString * const TGCommentId = @"comment";
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
         // Return if there is no comment
-        if (![responseObject isKindOfClass:[NSArray class]]) {
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
             self.tableView.mj_footer.hidden = YES;
             
             return;

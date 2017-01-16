@@ -10,6 +10,7 @@
 #import "TGPost.h"
 #import <UIImageView+WebCache.h>
 #import "TGShowPictureViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface TGPostVideoView ()
 
@@ -19,10 +20,23 @@
 @property (weak, nonatomic) IBOutlet UILabel *playTimesLabel;
 // Video duration
 @property (weak, nonatomic) IBOutlet UILabel *videoDurationLabel;
+// Play button
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+// Player view controller
+@property (nonatomic, strong) MPMoviePlayerViewController *playerVc;
 
 @end
 
 @implementation TGPostVideoView
+
+- (MPMoviePlayerViewController *)playerVc {
+    if (!_playerVc) {
+        NSURL *url = [NSURL URLWithString:self.post.videouri];
+        _playerVc = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    }
+    
+    return _playerVc;
+}
 
 + (instancetype)videoView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
@@ -62,6 +76,16 @@
     NSInteger minute = post.videotime / 60;
     NSInteger second = post.videotime % 60;
     self.videoDurationLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
+    
+    // Moniter play button
+    [self.playButton addTarget:self action:@selector(playVideo) forControlEvents:UIControlEventTouchUpInside];
+}
+
+/**
+ *  Play video
+ */
+- (IBAction)playVideo {
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentMoviePlayerViewControllerAnimated:self.playerVc];
 }
 
 @end

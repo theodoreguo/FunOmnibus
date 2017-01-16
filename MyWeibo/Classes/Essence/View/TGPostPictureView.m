@@ -77,7 +77,7 @@
         CGFloat height = width * image.size.height / image.size.width;
         [image drawInRect:CGRectMake(0, 0, width, height)];
         
-        // Fetch picture
+        // Get picture
         self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
         
         // End image context

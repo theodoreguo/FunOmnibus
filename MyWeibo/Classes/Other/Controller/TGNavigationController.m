@@ -28,6 +28,9 @@
     [super viewDidLoad];
     
 //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    
+    // If the function of sliding to delete is useless, clear the delegate to make navigation controller reset this function
+    self.interactivePopGestureRecognizer.delegate = nil;
 }
 
 

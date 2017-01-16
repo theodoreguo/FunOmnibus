@@ -10,6 +10,7 @@
 #import "TGPost.h"
 #import <UIImageView+WebCache.h>
 #import "TGShowPictureViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface TGPostAudioView ()
 
@@ -19,10 +20,23 @@
 @property (weak, nonatomic) IBOutlet UILabel *playTimesLabel;
 // Audio duration
 @property (weak, nonatomic) IBOutlet UILabel *audioDurationLabel;
+// Play button
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+// Player view controller
+@property (nonatomic, strong) MPMoviePlayerViewController *playerVc;
 
 @end
 
 @implementation TGPostAudioView
+
+- (MPMoviePlayerViewController *)playerVc {
+    if (!_playerVc) {
+        NSURL *url = [NSURL URLWithString:self.post.voiceuri];
+        _playerVc = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    }
+    
+    return _playerVc;
+}
 
 + (instancetype)audioView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
@@ -62,6 +76,13 @@
     NSInteger minute = post.voicetime / 60;
     NSInteger second = post.voicetime % 60;
     self.audioDurationLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
+    
+    // Moniter play button
+    [self.playButton addTarget:self action:@selector(playAudio) forControlEvents:UIControlEventTouchUpInside];
+}
+// Play audio
+- (IBAction)playAudio {
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentMoviePlayerViewControllerAnimated:self.playerVc];
 }
 
 @end

@@ -90,21 +90,23 @@
         
         // Calculate cell height based on post type
         if (self.type == TGPostTypePicture) { // Picture post
-            // Picture's displayed width
-            CGFloat pictureW = maxSize.width;
-            // Picture's displayed height
-            CGFloat pictureH = pictureW * self.height / self.width;
-            if (pictureH >= TGPostCellPictureMaxH) { // Picture exceeds stipulated limit
-                pictureH = TGPostCellPictureMaxDisplayH;
-                self.tooHighPicture = YES; // Hit max height limit
+            if (self.width != 0 && self.height != 0) {
+                // Picture's displayed width
+                CGFloat pictureW = maxSize.width;
+                // Picture's displayed height
+                CGFloat pictureH = pictureW * self.height / self.width;
+                if (pictureH >= TGPostCellPictureMaxH) { // Picture exceeds stipulated limit
+                    pictureH = TGPostCellPictureMaxDisplayH;
+                    self.tooHighPicture = YES; // Hit max height limit
+                }
+                
+                // Calculate picture view's frame
+                CGFloat pictureX = TGPostCellMargin;
+                CGFloat pictureY = TGPostCellTextY + textH + TGPostCellMargin;
+                _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+                
+                _cellHeight += pictureH + TGPostCellMargin;
             }
-            
-            // Calculate picture view's frame
-            CGFloat pictureX = TGPostCellMargin;
-            CGFloat pictureY = TGPostCellTextY + textH + TGPostCellMargin;
-            _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-            
-            _cellHeight += pictureH + TGPostCellMargin;
         } else if (self.type == TGPostTypeAudio) { // Audio post
             CGFloat audioX = TGPostCellMargin;
             CGFloat audioY = TGPostCellTextY + textH + TGPostCellMargin;

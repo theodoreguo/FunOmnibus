@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     // Set up navigation bar
-    [self setUpNav];
+    [self setUpNavi];
     
     // Initialize child view controller
     [self setUpChildVc];
@@ -44,7 +44,7 @@
 /**
  *  Set up navigation bar content
  */
--(void)setUpNav {
+-(void)setUpNavi {
     // Set navigation bar title
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
@@ -237,7 +237,7 @@
     // Current index
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
-    // Fetch child view controllers
+    // Acquire child view controllers
     UIViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
     vc.view.y = 0; // Set controller view's y equal to 0 instead of 20 by default

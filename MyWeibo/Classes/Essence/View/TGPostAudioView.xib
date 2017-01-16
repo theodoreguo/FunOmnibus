@@ -41,6 +41,9 @@
                         <constraint firstAttribute="width" constant="63" id="R3R-gt-KLK"/>
                     </constraints>
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                    <connections>
+                        <action selector="playAudio" destination="iN0-l3-epB" eventType="touchUpInside" id="0U9-v5-H3A"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +67,7 @@
             <connections>
                 <outlet property="audioDurationLabel" destination="8TB-3W-Mhc" id="2wH-OF-qEB"/>
                 <outlet property="imageView" destination="ho7-af-Y7Z" id="ZtV-wu-Wal"/>
+                <outlet property="playButton" destination="LZF-3L-gZf" id="KIF-Qg-3zx"/>
                 <outlet property="playTimesLabel" destination="4tA-AF-Ktv" id="w2E-6b-UzT"/>
             </connections>
             <point key="canvasLocation" x="-4" y="-1.5"/>

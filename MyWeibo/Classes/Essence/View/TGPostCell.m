@@ -55,7 +55,7 @@
 }
 
 - (TGPostPictureView *)pictureView {
-    if (! _pictureView) {
+    if (!_pictureView) {
         TGPostPictureView *pictureView = [TGPostPictureView pictureView];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
@@ -65,7 +65,7 @@
 }
 
 - (TGPostAudioView *)audioView {
-    if (! _audioView) {
+    if (!_audioView) {
         TGPostAudioView *audioView = [TGPostAudioView audioView];
         [self.contentView addSubview:audioView];
         _audioView = audioView;
@@ -75,7 +75,7 @@
 }
 
 - (TGPostVideoView *)videoView {
-    if (! _videoView) {
+    if (!_videoView) {
         TGPostVideoView *videoView = [TGPostVideoView videoView];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
@@ -178,7 +178,9 @@
     [super setFrame:frame];
 }
 
-// More button
+/**
+ *  More button
+ */
 - (IBAction)more {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     

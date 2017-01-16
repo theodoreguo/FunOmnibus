@@ -44,16 +44,16 @@
     
     // Add child view controller
     // Essence
-    [self setupChildVc:[[TGEssenceViewController alloc] init] title:@"Essence" image:@"tabBar_essence_icon" seletedImage:@"tabBar_essence_click_icon"];
+    [self setUpChildVc:[[TGEssenceViewController alloc] init] title:@"Essence" image:@"tabBar_essence_icon" seletedImage:@"tabBar_essence_click_icon"];
 
     // Latest
-    [self setupChildVc:[[TGLatestViewController alloc] init] title:@"Latest" image:@"tabBar_new_icon" seletedImage:@"tabBar_new_click_icon"];
+    [self setUpChildVc:[[TGLatestViewController alloc] init] title:@"Latest" image:@"tabBar_new_icon" seletedImage:@"tabBar_new_click_icon"];
     
     // Follow
-    [self setupChildVc:[[TGFollowViewController alloc] init] title:@"Follow" image:@"tabBar_friendTrends_icon" seletedImage:@"tabBar_friendTrends_click_icon"];
+    [self setUpChildVc:[[TGFollowViewController alloc] init] title:@"Follow" image:@"tabBar_friendTrends_icon" seletedImage:@"tabBar_friendTrends_click_icon"];
     
     // Me
-    [self setupChildVc:[[TGMeViewController alloc] init] title:@"Me" image:@"tabBar_me_icon" seletedImage:@"tabBar_me_click_icon"];
+    [self setUpChildVc:[[TGMeViewController alloc] initWithStyle:UITableViewStyleGrouped] title:@"Me" image:@"tabBar_me_icon" seletedImage:@"tabBar_me_click_icon"];
     
     // Alter tabBar using KVC
     [self setValue:[[TGTabBar alloc] init] forKey:@"tabBar"];
@@ -117,7 +117,7 @@
  *  @param image        original image
  *  @param seletedImage seleted image
  */
-- (void) setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image seletedImage:(NSString *)seletedImage {
+- (void) setUpChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image seletedImage:(NSString *)seletedImage {
     // Set text and images
     vc.navigationItem.title = title;
     vc.tabBarItem.title = title;

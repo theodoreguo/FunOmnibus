@@ -66,6 +66,12 @@
 		10F19CF21E10171100130BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE41E10171100130BFB /* main.m */; };
 		10F19CF31E10171100130BFB /* TGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F19CE81E10171100130BFB /* TGTabBar.m */; };
 		10F3B2841E10C4FC00BFB8D8 /* TGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */; };
+		10FBD96E1E27C22600553616 /* TGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FBD96D1E27C22600553616 /* TGMeCell.m */; };
+		10FBD9711E27CC5100553616 /* TGMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FBD9701E27CC5100553616 /* TGMeFooterView.m */; };
+		10FBD9741E2878AC00553616 /* TGMeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FBD9731E2878AC00553616 /* TGMeFunctions.m */; };
+		10FBD9771E28823200553616 /* TGMeFunctionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FBD9761E28823200553616 /* TGMeFunctionButton.m */; };
+		10FBD97A1E28B55A00553616 /* TGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FBD9791E28B55A00553616 /* TGWebViewController.m */; };
+		10FBD97C1E28B57700553616 /* TGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FBD97B1E28B57700553616 /* TGWebViewController.xib */; };
 		C41B7E3FEA4B0E5129720292 /* libPods-MyWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97384614EDC304D2471BA623 /* libPods-MyWeibo.a */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +180,17 @@
 		10F19CE81E10171100130BFB /* TGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTabBar.m; sourceTree = "<group>"; };
 		10F3B2821E10C4FC00BFB8D8 /* TGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGNavigationController.h; sourceTree = "<group>"; };
 		10F3B2831E10C4FC00BFB8D8 /* TGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGNavigationController.m; sourceTree = "<group>"; };
+		10FBD96C1E27C22600553616 /* TGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMeCell.h; sourceTree = "<group>"; };
+		10FBD96D1E27C22600553616 /* TGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMeCell.m; sourceTree = "<group>"; };
+		10FBD96F1E27CC5100553616 /* TGMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMeFooterView.h; sourceTree = "<group>"; };
+		10FBD9701E27CC5100553616 /* TGMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMeFooterView.m; sourceTree = "<group>"; };
+		10FBD9721E2878AC00553616 /* TGMeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMeFunctions.h; sourceTree = "<group>"; };
+		10FBD9731E2878AC00553616 /* TGMeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMeFunctions.m; sourceTree = "<group>"; };
+		10FBD9751E28823200553616 /* TGMeFunctionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMeFunctionButton.h; sourceTree = "<group>"; };
+		10FBD9761E28823200553616 /* TGMeFunctionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMeFunctionButton.m; sourceTree = "<group>"; };
+		10FBD9781E28B55A00553616 /* TGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGWebViewController.h; sourceTree = "<group>"; };
+		10FBD9791E28B55A00553616 /* TGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGWebViewController.m; sourceTree = "<group>"; };
+		10FBD97B1E28B57700553616 /* TGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGWebViewController.xib; sourceTree = "<group>"; };
 		2E06AD2C134C966DFF961837 /* Pods-MyWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		97384614EDC304D2471BA623 /* libPods-MyWeibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB89A4B1E960A19844976C50 /* Pods-MyWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeibo/Pods-MyWeibo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -414,6 +431,9 @@
 			children = (
 				10F19CD31E10171100130BFB /* TGMeViewController.h */,
 				10F19CD41E10171100130BFB /* TGMeViewController.m */,
+				10FBD9781E28B55A00553616 /* TGWebViewController.h */,
+				10FBD9791E28B55A00553616 /* TGWebViewController.m */,
+				10FBD97B1E28B57700553616 /* TGWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,6 +441,8 @@
 		10F19CD51E10171100130BFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				10FBD9721E2878AC00553616 /* TGMeFunctions.h */,
+				10FBD9731E2878AC00553616 /* TGMeFunctions.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -428,6 +450,12 @@
 		10F19CD61E10171100130BFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10FBD96C1E27C22600553616 /* TGMeCell.h */,
+				10FBD96D1E27C22600553616 /* TGMeCell.m */,
+				10FBD96F1E27CC5100553616 /* TGMeFooterView.h */,
+				10FBD9701E27CC5100553616 /* TGMeFooterView.m */,
+				10FBD9751E28823200553616 /* TGMeFunctionButton.h */,
+				10FBD9761E28823200553616 /* TGMeFunctionButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,6 +603,7 @@
 			files = (
 				10C43C911E263372005D50BE /* TGCommentCell.xib in Resources */,
 				10CB98261E1FA556007390DA /* TGPostPictureView.xib in Resources */,
+				10FBD97C1E28B57700553616 /* TGWebViewController.xib in Resources */,
 				10CB97FE1E18DC20007390DA /* TGPushGuideView.xib in Resources */,
 				10073BCD1E114ADB00CA0379 /* TGFollowViewController.xib in Resources */,
 				100A7F2D1E116EC500394669 /* TGRecommendViewController.xib in Resources */,
@@ -665,6 +694,8 @@
 				10CB981A1E1E2F58007390DA /* TGPostCell.m in Sources */,
 				104B2EAE1E12C7DE00163214 /* TGRecommendUser.m in Sources */,
 				10C43C901E263372005D50BE /* TGCommentCell.m in Sources */,
+				10FBD9741E2878AC00553616 /* TGMeFunctions.m in Sources */,
+				10FBD96E1E27C22600553616 /* TGMeCell.m in Sources */,
 				10F19CF01E10171100130BFB /* UIView+TGExtension.m in Sources */,
 				10CB97FC1E18DBF9007390DA /* TGPushGuideView.m in Sources */,
 				10CB97E91E160682007390DA /* TGRecommendTag.m in Sources */,
@@ -672,6 +703,7 @@
 				10C43C971E276AD3005D50BE /* UIImage+TGExtension.m in Sources */,
 				10CB97E61E15FF90007390DA /* TGRecommendTagViewController.m in Sources */,
 				10C43C9A1E2774A4005D50BE /* UIImageView+TGSetProfile.m in Sources */,
+				10FBD9711E27CC5100553616 /* TGMeFooterView.m in Sources */,
 				10F19CE91E10171100130BFB /* TGEssenceViewController.m in Sources */,
 				104B2EAA1E12C09F00163214 /* TGRecommendUserCell.m in Sources */,
 				10C43C8C1E261ED8005D50BE /* TGCommentHeaderView.m in Sources */,
@@ -681,8 +713,10 @@
 				10F19CEC1E10171100130BFB /* TGMeViewController.m in Sources */,
 				10C43C811E24BD50005D50BE /* TGUser.m in Sources */,
 				10F19CEF1E10171100130BFB /* UIView+FixViewDebugging.m in Sources */,
+				10FBD9771E28823200553616 /* TGMeFunctionButton.m in Sources */,
 				10CB97F91E179FBD007390DA /* TGPlaceholderTextField.m in Sources */,
 				10C43C7C1E249CA2005D50BE /* TGPostVideoView.m in Sources */,
+				10FBD97A1E28B55A00553616 /* TGWebViewController.m in Sources */,
 				10CB97ED1E1610B6007390DA /* TGRecommendTagCell.m in Sources */,
 				10CB98131E1D158D007390DA /* TGPost.m in Sources */,
 				10CB97F21E16B49A007390DA /* TGLoginRegisterViewController.m in Sources */,

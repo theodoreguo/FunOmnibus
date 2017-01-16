@@ -50,6 +50,10 @@
 @property (nonatomic, assign) NSInteger videotime;
 // Audio play times
 @property (nonatomic, assign) NSInteger playcount;
+// Video's URL
+@property (nonatomic, copy) NSString *videouri;
+// Audio's URL
+@property (nonatomic, copy) NSString *voiceuri;
 // Top comment
 @property (nonatomic, strong) TGComment *top_cmt;
 
