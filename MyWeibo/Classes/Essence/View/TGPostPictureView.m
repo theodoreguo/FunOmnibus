@@ -83,7 +83,7 @@
         // End image context
         UIGraphicsEndImageContext();
     }];
-    
+
     // Judge to show gif indicator
     NSString *extension = post.large_image.pathExtension;
     self.gifView.hidden = ![extension.lowercaseString isEqualToString:@"gif"];
