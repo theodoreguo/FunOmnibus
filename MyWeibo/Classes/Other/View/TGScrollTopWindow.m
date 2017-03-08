@@ -18,8 +18,8 @@ static UIWindow *window_;
     window_.frame = CGRectMake(0, 0, TGScreenW, 20);
     window_.windowLevel = UIWindowLevelAlert;
     [window_ addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(windowClick)]];
-    UIViewController* vc = [[UIViewController alloc]initWithNibName:nil bundle:nil];
-    window_.rootViewController = vc;
+//    UIViewController *vc = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+//    window_.rootViewController = vc;
 }
 
 + (void)show {
