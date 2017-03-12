@@ -10,6 +10,7 @@
 
 @interface UIView (TGExtension)
 
+// Note: Declaring @property in the category will only generate method declaration without its implementation and "_XX" member variables
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;

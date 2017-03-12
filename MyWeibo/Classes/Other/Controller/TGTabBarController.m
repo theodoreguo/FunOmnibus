@@ -24,7 +24,7 @@
  *  Called when the class is used the first time
  */
 + (void)initialize {    
-    // Set UITabBarItem text attributes via "appearance" concurrently (Only those including UI_APPEARANCE_SELECTOR can be set by UITabBarItem)
+    // Set UITabBarItem text attributes via "appearance" concurrently (Only those methods with UI_APPEARANCE_SELECTOR can be set by "appearance")
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
