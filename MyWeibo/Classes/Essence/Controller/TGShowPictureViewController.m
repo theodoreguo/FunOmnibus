@@ -66,7 +66,7 @@
         return;
     }
     
-    // Save picture to photo album
+    // Save picture to photos album
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 

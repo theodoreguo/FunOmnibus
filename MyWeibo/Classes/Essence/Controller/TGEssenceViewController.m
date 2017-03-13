@@ -115,8 +115,7 @@
             
             // Make button's lable to calculate size based on text content
             [button.titleLabel sizeToFit];
-            
-            
+                        
             self.indicatorView.width = button.titleLabel.width;
             //            // Another method to show indicator by defualt
             //            self.indicatorView.width = [titles[i] sizeWithAttributes:@{NSFontAttributeName: button.titleLabel.font}].width;
@@ -168,7 +167,7 @@
 //    contentView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     */
     contentView.delegate = self;
-    contentView.pagingEnabled = YES; // Enable scroll view pagging
+    contentView.pagingEnabled = YES; // Enable scroll view paging
     [self.view insertSubview:contentView atIndex:0];
     contentView.contentSize = CGSizeMake(contentView.width * self.childViewControllers.count, 0);
     self.contentView = contentView;
@@ -186,7 +185,7 @@
     //    contentView.height = self.view.height - contentView.y - self.tabBarController.tabBar.height;
     */
     
-    // Add the first controller's view (i.e., All)
+    // Add the first controller's view (i.e., All) as default displayed view
     [self scrollViewDidEndScrollingAnimation:contentView];
 }
 
@@ -218,6 +217,9 @@
     [self addChildViewController:joke];
 }
 
+/**
+ *  Click recommend tag
+ */
 - (void)tagClick {
     TGRecommendTagViewController *tag = [[TGRecommendTagViewController alloc] init];
     [self.navigationController pushViewController:tag animated:YES];
