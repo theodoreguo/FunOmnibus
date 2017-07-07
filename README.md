@@ -1,4 +1,4 @@
-# MyWeibo
+# FunOmnibus
 This is an iOS app in Objective-C implementing major functions of entertainment app Budejie.
 ## 1. Guideline Push for First Use
 ![image](https://github.com/theodoreguo/MyWeibo/blob/master/Intro/Guideline%20for%20First%20Use.gif)
